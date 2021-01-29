@@ -1,0 +1,6 @@
+hsetroot -solid "#161616"
+picom --config ~/.config/picom/picom.conf &
+source ~/.config/zsh/.zprofile
+xrdb -m ~/.config/X/Xresources
+xset r rate 300 50
+exec dwm

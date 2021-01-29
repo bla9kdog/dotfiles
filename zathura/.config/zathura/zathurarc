@@ -1,0 +1,15 @@
+set font "JetBrainsMono Nerd Font Mono 9"
+set default-bg "#161616" #00
+set default-fg "#767b6f" #01
+
+set statusbar-fg "#767b6g" #04
+set statusbar-bg "#1a1a1a" #01
+
+set inputbar-bg "#222222" #00 currently not used
+set inputbar-fg "#FFFFFF" #02
+
+set recolor "false"
+set recolor-lightcolor "#161616" #00
+set recolor-darkcolor "#ffffff" #06
+set recolor-reverse-video "true"
+set recolor-keephue "true"
