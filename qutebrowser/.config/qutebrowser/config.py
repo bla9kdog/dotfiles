@@ -13,6 +13,30 @@
 # Change the argument to True to still load settings configured via autoconfig.yml
 config.load_autoconfig(False)
 
+# How to open links in an existing instance if a new one is launched.
+# This happens when e.g. opening a link from a terminal. See
+# `new_instance_open_target_window` to customize in which window the
+# link is opened in.
+# Type: String
+# Valid values:
+#   - tab: Open a new tab in the existing window and activate the window.
+#   - tab-bg: Open a new background tab in the existing window and activate the window.
+#   - tab-silent: Open a new tab in the existing window without activating the window.
+#   - tab-bg-silent: Open a new background tab in the existing window without activating the window.
+#   - window: Open in a new window.
+#   - private-window: Open in a new private window.
+c.new_instance_open_target = 'tab'
+
+# Which window to choose when opening links as new tabs. When
+# `new_instance_open_target` is set to `window`, this is ignored.
+# Type: String
+# Valid values:
+#   - first-opened: Open new tabs in the first (oldest) opened window.
+#   - last-opened: Open new tabs in the last (newest) opened window.
+#   - last-focused: Open new tabs in the most recently focused window.
+#   - last-visible: Open new tabs in the most recently visible window.
+c.new_instance_open_target_window = 'last-visible'
+
 # Turn on Qt HighDPI scaling. This is equivalent to setting
 # QT_AUTO_SCREEN_SCALE_FACTOR=1 or QT_ENABLE_HIGHDPI_SCALING=1 (Qt >=
 # 5.14) in the environment. It's off by default as it can cause issues
@@ -181,6 +205,14 @@ c.fileselect.single_file.command = ['st', '-e', 'ranger', '--choosefile={}']
 # Type: ShellCommand
 c.fileselect.multiple_files.command = ['st', '-e', 'ranger', '--choosefiles={}']
 
+# Show a filebrowser in download prompts.
+# Type: Bool
+c.prompt.filebrowser = True
+
+# Rounding radius (in pixels) for the edges of prompts.
+# Type: Int
+c.prompt.radius = 0
+
 # When/how to show the scrollbar.
 # Type: String
 # Valid values:
@@ -189,6 +221,10 @@ c.fileselect.multiple_files.command = ['st', '-e', 'ranger', '--choosefiles={}']
 #   - when-searching: Show the scrollbar when searching for text in the webpage. With the QtWebKit backend, this is equal to `never`.
 #   - overlay: Show an overlay scrollbar. On macOS, this is unavailable and equal to `when-searching`; with the QtWebKit backend, this is equal to `never`. Enabling/disabling overlay scrollbars requires a restart.
 c.scrolling.bar = 'never'
+
+# Open new tabs (middleclick/ctrl+click) in the background.
+# Type: Bool
+c.tabs.background = True
 
 # When to show favicons in the tab bar. When switching this from never
 # to always/pinned, note that favicons might not be loaded yet, thus
