@@ -11,6 +11,7 @@ export XDG_CACHE_HOME=$HOME/.cache
 export XDG_DATA_HOME=$HOME/.local/share
 export XDG_CONFIG_HOME=$HOME/.config
 export ZDOTDIR=$XDG_CONFIG_HOME/zsh
+export HISTFILE="$XDG_DATA_HOME"/zsh/history
 export PATH=$XDG_CONFIG_HOME/npm-global/bin:$PATH
 export WEECHAT_HOME="$XDG_CONFIG_HOME"/weechat
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
