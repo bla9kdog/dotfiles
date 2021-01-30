@@ -11,9 +11,8 @@ source ~/.config/zsh/vi-mode.zsh/vi-mode.zsh
 
 alias v="nvim"
 alias vim="nvim"
-alias sv="sudo nvim"
+alias sv="sudoedit"
 alias pacman="sudo pacman"
-alias font="cd ~/src/figma-linux-font-helper && npm start"
 alias SS="sudo systemctl"
 alias dr="~/.local/bin/dragon"
 alias ls="ls -alh --color=auto"
@@ -21,7 +20,7 @@ alias ..="cd .."
 alias unlock="sudo rm /var/lib/pacman/db.lck"
 alias grep="grep --color=auto"
 alias df="df -h"
-alias free="free -m"
+alias free="free -h"
 
 # History
 
