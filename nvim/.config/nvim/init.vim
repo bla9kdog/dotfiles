@@ -9,7 +9,7 @@ set noruler
 set scrolloff=3
 set termguicolors
 
-" Vim-plug initialization
+" Plugins initialization
 
 if empty(glob('~/.config/nvim/autoload/plug.vim'))
     silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
