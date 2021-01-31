@@ -55,6 +55,8 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " Fzf
 
 map <C-f> <Esc><Esc>:Files!<CR>
+map <A-f> <Esc><Esc>:Rg!<CR>
+map <A-y> <Esc><Esc>:History!<CR>
 let $FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --layout reverse --margin=1,4 --preview 'bat --color=always --style=header,grid --line-range :300 {}'"
 
 " NERDTree

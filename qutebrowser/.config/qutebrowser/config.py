@@ -277,7 +277,7 @@ c.colors.completion.odd.bg = '#161616'
 
 # Background color of the completion widget for even rows.
 # Type: QssColor
-c.colors.completion.even.bg = '#222'
+c.colors.completion.even.bg = '#161616'
 
 # Background color of the completion widget category headers.
 # Type: QssColor
@@ -297,19 +297,19 @@ c.colors.completion.item.selected.fg = '#fff'
 
 # Background color of the selected completion item.
 # Type: QssColor
-c.colors.completion.item.selected.bg = '#cb712a'
+c.colors.completion.item.selected.bg = '#262626'
 
 # Top border color of the selected completion item.
 # Type: QssColor
-c.colors.completion.item.selected.border.top = '#cb712a'
+c.colors.completion.item.selected.border.top = '#262626'
 
 # Bottom border color of the selected completion item.
 # Type: QssColor
-c.colors.completion.item.selected.border.bottom = '#cb712a'
+c.colors.completion.item.selected.border.bottom = '#262626'
 
 # Foreground color of the matched text in the selected completion item.
 # Type: QtColor
-c.colors.completion.item.selected.match.fg = '#161616'
+c.colors.completion.item.selected.match.fg = '#cb712a'
 
 # Foreground color of the matched text in the completion.
 # Type: QtColor
@@ -350,17 +350,17 @@ c.colors.statusbar.url.error.fg = '#cb712a'
 
 # Foreground color of the URL in the statusbar for hovered links.
 # Type: QssColor
-c.colors.statusbar.url.hover.fg = '#87a4a5'
+c.colors.statusbar.url.hover.fg = '#b1faeb'
 
 # Foreground color of the URL in the statusbar on successful load
 # (http).
 # Type: QssColor
-c.colors.statusbar.url.success.http.fg = '#87ffaf'
+c.colors.statusbar.url.success.http.fg = '#549f9c'
 
 # Foreground color of the URL in the statusbar on successful load
 # (https).
 # Type: QssColor
-c.colors.statusbar.url.success.https.fg = '#87ffaf'
+c.colors.statusbar.url.success.https.fg = '#549f9c'
 
 # Background color of the tab bar.
 # Type: QssColor
