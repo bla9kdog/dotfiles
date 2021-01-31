@@ -8,7 +8,7 @@ let s:t_Co = exists('&t_Co') && !empty(&t_Co) && &t_Co > 1 ? &t_Co : 2
 if (has('termguicolors') && &termguicolors) || has('gui_running')
   let g:terminal_ansi_colors = ['#43454b', '#8599b7', '#549F9C', '#d9c668',
         \ '#4ec4e6', '#cb712a', '#86a3a4', '#ffffff', '#767b6f', '#8599b7',
-        \ '#b1faeb', '#ffa14f', '#6bdfff', '#9fafaf', '#dfaf52', '#ffffff']
+        \ '#b1faeb', '#dcea8f', '#6bdfff', '#9fafaf', '#dfaf52', '#ffffff']
   if has('nvim')
     let g:terminal_color_0 = '#43454b'
     let g:terminal_color_1 = '#8599b7'
@@ -21,7 +21,7 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
     let g:terminal_color_8 = '#767b6f'
     let g:terminal_color_9 = '#8599b7'
     let g:terminal_color_10 = '#b1faeb'
-    let g:terminal_color_11 = '#ffa14f'
+    let g:terminal_color_11 = '#dcea8f'
     let g:terminal_color_12 = '#6bdfff'
     let g:terminal_color_13 = '#9fafaf'
     let g:terminal_color_14 = '#dfaf52'
@@ -65,7 +65,7 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
   hi ModeMsg guifg=#767b6f guibg=NONE gui=NONE cterm=NONE
   hi MoreMsg guifg=#cb712a guibg=NONE gui=NONE cterm=NONE
   hi Question guifg=#cb712a guibg=NONE gui=NONE cterm=NONE
-  hi WarningMsg guifg=#ffa14f guibg=NONE gui=NONE cterm=NONE
+  hi WarningMsg guifg=#dcea8f guibg=NONE gui=NONE cterm=NONE
   hi ColorColumn guifg=NONE guibg=#26262b gui=NONE cterm=NONE
   hi CursorColumn guifg=NONE guibg=#26262b gui=NONE cterm=NONE
   hi CursorLine guifg=NONE guibg=#26262b gui=NONE cterm=NONE
@@ -78,12 +78,12 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
   hi Search guifg=#ffffff guibg=#43454b gui=NONE cterm=NONE
   hi Visual guifg=NONE guibg=#43454b gui=NONE cterm=NONE
   hi DiffAdd guifg=#b1faeb guibg=#1e2a28 gui=NONE cterm=NONE
-  hi DiffChange guifg=#ffa14f guibg=NONE gui=NONE cterm=NONE
+  hi DiffChange guifg=#dcea8f guibg=NONE gui=NONE cterm=NONE
   hi DiffDelete guifg=#8599b7 guibg=#2f2625 gui=NONE cterm=NONE
-  hi DiffText guifg=#ffa14f guibg=#2e2622 gui=NONE cterm=NONE
+  hi DiffText guifg=#dcea8f guibg=#2e2622 gui=NONE cterm=NONE
   hi Comment guifg=#767b6f guibg=NONE gui=NONE cterm=NONE
   hi Error guifg=#161616 guibg=#8599b7 gui=NONE cterm=NONE
-  hi PreProc guifg=#ffa14f guibg=NONE gui=NONE cterm=NONE
+  hi PreProc guifg=#dcea8f guibg=NONE gui=NONE cterm=NONE
   hi Special guifg=#549F9C guibg=NONE gui=NONE cterm=NONE
   hi Statement guifg=#cb712a guibg=NONE gui=bold cterm=bold
   hi Character guifg=#d9c668 guibg=NONE gui=NONE cterm=NONE
@@ -711,7 +711,7 @@ endif
 " Color: red_wash     #2f2625 ~
 " Color: blue         #4ec4e6 ~
 " Color: light_blue   #6bdfff ~
-" Color: orange       #ffa14f ~
+" Color: orange       #dcea8f ~
 " Color: pink         #cb712a ~
 " Color: red          #8599b7 ~
 " Color: yellow       #d9c668 ~
