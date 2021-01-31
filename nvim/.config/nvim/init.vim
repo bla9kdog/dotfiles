@@ -20,7 +20,7 @@ endif
 " Plugins
 
 call plug#begin('~/.config/nvim/plugged')
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf', { 'dir': '~/.config/fzf', 'do': './install --all --xdg' }
 Plug 'junegunn/fzf.vim'
 Plug 'mattn/emmet-vim'
 Plug 'sheerun/vim-polyglot'
