@@ -1,4 +1,4 @@
-LS_COLORS='di=31:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:'
+LS_COLORS='di=36:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:'
 export LS_COLORS
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --exclude .vim'
 
@@ -70,8 +70,8 @@ function git_prompt_info() {
 
 if [[ `uname` == 'Linux' ]]
 then
-    local user_host='%{$fg[cyan]%}%n@%m%{$reset_color%}'
-    local current_dir='%{$fg[red]%}%~%{$reset_color%}'
+    local user_host='%{$fg[white]%}%n@%m%{$reset_color%}'
+    local current_dir='%{$fg[cyan]%}%~%{$reset_color%}'
     RPROMPT="[%{$fg[red]%}%@%{$reset_color%}] ${return_code}%{$reset_color%}"
     PROMPT="┌─[${user_host}]—[${current_dir}]${git_branch}
 └─%B%b "

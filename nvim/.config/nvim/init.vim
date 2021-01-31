@@ -7,14 +7,7 @@ set fillchars+=vert:\
 set mouse=a
 set noruler
 set scrolloff=3
-colorscheme default
-
-" Spacing
-
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
-set expandtab
+set termguicolors
 
 " Vim-plug initialization
 
@@ -30,6 +23,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'mattn/emmet-vim'
+Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 Plug 'Townk/vim-autoclose'
 Plug 'tpope/vim-surround'
@@ -38,10 +32,20 @@ Plug 'myusuf3/numbers.vim'
 Plug 'ap/vim-css-color'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'jeetsukumaran/vim-indentwise'
-Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdtree'
+Plug 'preservim/nerdcommenter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 call plug#end()
+
+colorscheme monudark
+
+" Spacing
+
+set tabstop=4
+set softtabstop=4
+set shiftwidth=4
+set expandtab
 
 " CoC
 
