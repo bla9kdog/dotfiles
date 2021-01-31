@@ -19,11 +19,22 @@ alias SS="sudo systemctl"
 alias dr="dragon"
 alias ls="ls -alh --color=auto"
 alias ..="cd .."
+alias ...="cd ../.."
 alias unlock="sudo rm /var/lib/pacman/db.lck"
 alias grep="grep --color=auto"
 alias df="df -h"
 alias free="free -h"
 alias cat="bat"
+alias cp="cp -i"
+
+alias addup="git add -u"
+alias addall="git add ."
+alias commit="git commit -m"
+alias checkout="git checkout"
+alias fetch="git fetch"
+alias pull="git pull origin"
+alias push="git push origin"
+
 
 # History
 
