@@ -7,7 +7,7 @@ export BAT_THEME="ansi-dark"
 
 source ~/.config/zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source ~/.config/zsh/vi-mode.zsh/vi-mode.zsh
+source ~/.config/zsh/zsh-vim-mode/zsh-vim-mode.plugin.zsh
 
 # Aliases
 
