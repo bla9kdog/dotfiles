@@ -50,17 +50,6 @@ setopt promptpercent
 
 autoload colors; colors;
 
-local return_code="%(?..%{$fg[cyan]%}%? ↵%{$reset_color%})"
-
-local user_host='%{$fg[cyan]%}%n@%m%{$reset_color%}'
-local current_dir='%{$fg[red]%}%~%{$reset_color%}'
-
-local git_branch='$(git_prompt_info)%{$reset_color%}'
-
-RPROMPT="[%{$fg[cyan]%}%@%{$reset_color%}] ${return_code}%{$reset_color%}"
-PROMPT="┌─[${user_host}]—[${current_dir}]${git_branch}
-└─%B%b "
-
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
 
 # Git Prompt
@@ -70,13 +59,10 @@ function git_prompt_info() {
   echo "—[%{$fg[yellow]%}${ref#refs/heads/}%{$reset_color%}]"
 }
 
-if [[ `uname` == 'Linux' ]]
-then
-    local user_host='%{$fg[white]%}%n@%m%{$reset_color%}'
-    local current_dir='%{$fg[cyan]%}%~%{$reset_color%}'
-    RPROMPT="[%{$fg[red]%}%@%{$reset_color%}] ${return_code}%{$reset_color%}"
-    PROMPT="┌─[${user_host}]—[${current_dir}]${git_branch}
+local user_host='%{$fg[white]%}%n@%m%{$reset_color%}'
+local current_dir='%{$fg[cyan]%}%~%{$reset_color%}'
+RPROMPT="[%{$fg[red]%}%@%{$reset_color%}] ${return_code}%{$reset_color%}"
+PROMPT="┌─[${user_host}]—[${current_dir}]${git_branch}
 └─%B%b "
-fi
 
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh ] && source "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh
