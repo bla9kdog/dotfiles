@@ -1,6 +1,8 @@
 LS_COLORS='di=36:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:'
 export LS_COLORS
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --exclude .vim'
+let $FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --layout reverse --margin=1,4 --preview 'bat --color=always --style=header,grid --line-range :300 {}'"
+
 
 # Plugins
 
@@ -22,6 +24,7 @@ alias unlock="sudo rm /var/lib/pacman/db.lck"
 alias grep="grep --color=auto"
 alias df="df -h"
 alias free="free -h"
+alias cat="bat"
 
 # History
 
