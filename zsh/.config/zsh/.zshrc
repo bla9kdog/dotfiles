@@ -42,6 +42,7 @@ _comp_options+=(globdots)
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
+
 # Prompt
 
 setopt prompt_subst
@@ -50,18 +51,21 @@ setopt promptpercent
 
 autoload colors; colors;
 
+local return_code="%(?..%{$fg[red]%}%? ↵%{$reset_color%})"
+local git_branch='$(git_prompt_info)%{$reset_color%}'
+
 ZSH_THEME_GIT_PROMPT_SUFFIX=""
 
 # Git Prompt
 
 function git_prompt_info() {
   ref=$(git symbolic-ref HEAD 2> /dev/null) || return
-  echo "—[%{$fg[yellow]%}${ref#refs/heads/}%{$reset_color%}]"
+  echo "—[%{$fg[red]%}${ref#refs/heads/}%{$reset_color%}]"
 }
 
 local user_host='%{$fg[white]%}%n@%m%{$reset_color%}'
 local current_dir='%{$fg[cyan]%}%~%{$reset_color%}'
-RPROMPT="[%{$fg[red]%}%@%{$reset_color%}] ${return_code}%{$reset_color%}"
+RPROMPT="${return_code}%{$reset_color%}"
 PROMPT="┌─[${user_host}]—[${current_dir}]${git_branch}
 └─%B%b "
 
