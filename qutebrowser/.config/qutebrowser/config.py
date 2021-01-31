@@ -338,7 +338,29 @@ c.colors.statusbar.normal.bg = '#161616'
 
 # Background color of the statusbar in insert mode.
 # Type: QssColor
-c.colors.statusbar.insert.bg = '#cb712a'
+c.colors.statusbar.insert.bg = '#222'
+
+# Background color of the statusbar in passthrough mode.
+# Type: QssColor
+c.colors.statusbar.passthrough.bg = '#333'
+
+# Foreground color of the URL in the statusbar on error.
+# Type: QssColor
+c.colors.statusbar.url.error.fg = '#cb712a'
+
+# Foreground color of the URL in the statusbar for hovered links.
+# Type: QssColor
+c.colors.statusbar.url.hover.fg = '#87a4a5'
+
+# Foreground color of the URL in the statusbar on successful load
+# (http).
+# Type: QssColor
+c.colors.statusbar.url.success.http.fg = '#87ffaf'
+
+# Foreground color of the URL in the statusbar on successful load
+# (https).
+# Type: QssColor
+c.colors.statusbar.url.success.https.fg = '#87ffaf'
 
 # Background color of the tab bar.
 # Type: QssColor
