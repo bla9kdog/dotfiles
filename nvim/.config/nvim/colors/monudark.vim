@@ -8,7 +8,7 @@ let s:t_Co = exists('&t_Co') && !empty(&t_Co) && &t_Co > 1 ? &t_Co : 2
 if (has('termguicolors') && &termguicolors) || has('gui_running')
   let g:terminal_ansi_colors = ['#43454b', '#8599b7', '#549F9C', '#d9c668',
         \ '#4ec4e6', '#cb712a', '#86a3a4', '#ffffff', '#767b6f', '#8599b7',
-        \ '#b1faeb', '#ffa14f', '#6bdfff', '#cb712a', '#dfaf52', '#ffffff']
+        \ '#b1faeb', '#ffa14f', '#6bdfff', '#9fafaf', '#dfaf52', '#ffffff']
   if has('nvim')
     let g:terminal_color_0 = '#43454b'
     let g:terminal_color_1 = '#8599b7'
@@ -23,7 +23,7 @@ if (has('termguicolors') && &termguicolors) || has('gui_running')
     let g:terminal_color_10 = '#b1faeb'
     let g:terminal_color_11 = '#ffa14f'
     let g:terminal_color_12 = '#6bdfff'
-    let g:terminal_color_13 = '#cb712a'
+    let g:terminal_color_13 = '#9fafaf'
     let g:terminal_color_14 = '#dfaf52'
     let g:terminal_color_15 = '#ffffff'
   endif
