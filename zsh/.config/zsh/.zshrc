@@ -34,7 +34,7 @@ alias checkout="git checkout"
 alias fetch="git fetch"
 alias pull="git pull origin"
 alias push="git push origin"
-
+alias status="git status"
 
 # History
 
