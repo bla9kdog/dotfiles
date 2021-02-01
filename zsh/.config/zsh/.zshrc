@@ -15,7 +15,7 @@ source ~/.config/zsh/zsh-vim-mode/zsh-vim-mode.plugin.zsh
 alias v="nvim"
 alias vim="nvim"
 alias sv="sudoedit"
-alias pacman="sudo pacman"
+alias pacman="sudo pacmann"
 alias SS="sudo systemctl"
 alias dr="dragon"
 alias ls="ls -alh --color=auto"
@@ -57,6 +57,7 @@ bindkey '^[[B' history-substring-search-down
 # Autosuggestions
 
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=yellow,underline"
+bindkey '^ ' autosuggest-accept
 
 # Prompt
 
