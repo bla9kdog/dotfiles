@@ -15,7 +15,7 @@ source ~/.config/zsh/zsh-vim-mode/zsh-vim-mode.plugin.zsh
 alias v="nvim"
 alias vim="nvim"
 alias sv="sudoedit"
-alias pacman="sudo pacmann"
+alias pacman="sudo pacman"
 alias SS="sudo systemctl"
 alias dr="dragon"
 alias ls="ls -alh --color=auto"
