@@ -7,6 +7,7 @@ export BAT_THEME="ansi-dark"
 
 source ~/.config/zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 source ~/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source ~/.config/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/.config/zsh/zsh-vim-mode/zsh-vim-mode.plugin.zsh
 
 # Aliases
@@ -53,6 +54,9 @@ _comp_options+=(globdots)
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
 
+# Autosuggestions
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=yellow,underline"
 
 # Prompt
 
