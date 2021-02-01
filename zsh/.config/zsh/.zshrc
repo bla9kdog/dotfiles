@@ -74,10 +74,10 @@ function git_prompt_info() {
   echo "—[%{$fg[red]%}${ref#refs/heads/}%{$reset_color%}]"
 }
 
-local user_host='%{$fg[white]%}%n@%m%{$reset_color%}'
+#local user_host='%{$fg[white]%}%n@%m%{$reset_color%}'
 local current_dir='%{$fg[cyan]%}%~%{$reset_color%}'
 RPROMPT="${return_code}%{$reset_color%}"
-PROMPT="┌─[${user_host}]—[${current_dir}]${git_branch}
+PROMPT="┌─[${current_dir}]${git_branch}
 └─%B%b "
 
 [ -f "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh ] && source "${XDG_CONFIG_HOME:-$HOME/.config}"/fzf/fzf.zsh
