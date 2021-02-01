@@ -205,6 +205,10 @@ c.fileselect.single_file.command = ['st', '-e', 'ranger', '--choosefile={}']
 # Type: ShellCommand
 c.fileselect.multiple_files.command = ['st', '-e', 'ranger', '--choosefiles={}']
 
+# CSS border value for hints.
+# Type: String
+c.hints.border = '1px solid #D26719'
+
 # Show a filebrowser in download prompts.
 # Type: Bool
 c.prompt.filebrowser = True
@@ -327,18 +331,36 @@ c.colors.completion.scrollbar.bg = '#34353b'
 # Type: QssColor
 c.colors.downloads.bar.bg = '#1f1f24'
 
+# Color gradient interpolation system for download text.
+# Type: ColorSystem
+# Valid values:
+#   - rgb: Interpolate in the RGB color system.
+#   - hsv: Interpolate in the HSV color system.
+#   - hsl: Interpolate in the HSL color system.
+#   - none: Don't show a gradient.
+c.colors.downloads.system.fg = 'rgb'
+
+# Color gradient interpolation system for download backgrounds.
+# Type: ColorSystem
+# Valid values:
+#   - rgb: Interpolate in the RGB color system.
+#   - hsv: Interpolate in the HSV color system.
+#   - hsl: Interpolate in the HSL color system.
+#   - none: Don't show a gradient.
+c.colors.downloads.system.bg = 'rgb'
+
 # Font color for hints.
 # Type: QssColor
-c.colors.hints.fg = '#fff'
+c.colors.hints.fg = '#804216'
 
 # Background color for hints. Note that you can use a `rgba(...)` value
 # for transparency.
 # Type: QssColor
-c.colors.hints.bg = '#ff8a7a'
+c.colors.hints.bg = '#ffa14f'
 
 # Font color for the matched part of hints.
 # Type: QtColor
-c.colors.hints.match.fg = '#161616'
+c.colors.hints.match.fg = '#1f1f24'
 
 # Border color of an info message.
 # Type: QssColor
