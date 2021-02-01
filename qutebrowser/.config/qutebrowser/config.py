@@ -305,15 +305,15 @@ c.colors.completion.item.selected.fg = '#fff'
 
 # Background color of the selected completion item.
 # Type: QssColor
-c.colors.completion.item.selected.bg = '#262626'
+c.colors.completion.item.selected.bg = '#43454b'
 
 # Top border color of the selected completion item.
 # Type: QssColor
-c.colors.completion.item.selected.border.top = '#262626'
+c.colors.completion.item.selected.border.top = '#43454b'
 
 # Bottom border color of the selected completion item.
 # Type: QssColor
-c.colors.completion.item.selected.border.bottom = '#262626'
+c.colors.completion.item.selected.border.bottom = '#43454b'
 
 # Foreground color of the matched text in the selected completion item.
 # Type: QtColor
