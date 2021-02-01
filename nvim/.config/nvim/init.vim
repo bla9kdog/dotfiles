@@ -36,9 +36,10 @@ Plug 'preservim/nerdtree'
 Plug 'preservim/nerdcommenter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'arzg/vim-colors-xcode'
 call plug#end()
 
-colorscheme monudark
+colorscheme xcodedarkhc
 
 " Spacing
 

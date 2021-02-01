@@ -27,6 +27,8 @@ alias df="df -h"
 alias free="free -h"
 alias cat="bat"
 alias cp="cp -i"
+alias mv="mv -i"
+alias rm="rm -i"
 
 alias addup="git add -u"
 alias addall="git add ."
@@ -56,7 +58,7 @@ bindkey '^[[B' history-substring-search-down
 
 # Autosuggestions
 
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=cyan,underline,bold"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=8,bold"
 bindkey '^ ' autosuggest-accept
 
 # Prompt
