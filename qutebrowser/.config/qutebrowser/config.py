@@ -413,9 +413,22 @@ c.colors.statusbar.url.success.https.fg = '#83c9bc'
 # Type: QssColor
 c.colors.tabs.bar.bg = '#1f1f24'
 
+# Color gradient start for the tab indicator.
+# Type: QtColor
+c.colors.tabs.indicator.start = '#0000aa'
+
 # Color gradient end for the tab indicator.
 # Type: QtColor
 c.colors.tabs.indicator.stop = '#00aa00'
+
+# Color gradient interpolation system for the tab indicator.
+# Type: ColorSystem
+# Valid values:
+#   - rgb: Interpolate in the RGB color system.
+#   - hsv: Interpolate in the HSV color system.
+#   - hsl: Interpolate in the HSL color system.
+#   - none: Don't show a gradient.
+c.colors.tabs.indicator.system = 'rgb'
 
 # Foreground color of unselected odd tabs.
 # Type: QtColor
@@ -423,7 +436,7 @@ c.colors.tabs.odd.fg = '#838991'
 
 # Background color of unselected odd tabs.
 # Type: QtColor
-c.colors.tabs.odd.bg = '#2a2a2f'
+c.colors.tabs.odd.bg = '#232328'
 
 # Foreground color of unselected even tabs.
 # Type: QtColor
@@ -431,7 +444,7 @@ c.colors.tabs.even.fg = '#838991'
 
 # Background color of unselected even tabs.
 # Type: QtColor
-c.colors.tabs.even.bg = '#252529'
+c.colors.tabs.even.bg = '#232328'
 
 # Background color of selected odd tabs.
 # Type: QtColor
@@ -472,6 +485,45 @@ c.colors.tabs.pinned.selected.even.fg = '#fff'
 # Background color of pinned selected even tabs.
 # Type: QtColor
 c.colors.tabs.pinned.selected.even.bg = '#37b66a'
+
+# Background color for webpages if unset (or empty to use the theme's
+# color).
+# Type: QtColor
+c.colors.webpage.bg = 'white'
+
+# Force `prefers-color-scheme: dark` colors for websites.
+# Type: Bool
+c.colors.webpage.prefers_color_scheme_dark = False
+
+# Render all web contents using a dark theme. Example configurations
+# from Chromium's `chrome://flags`:  - "With simple HSL/CIELAB/RGB-based
+# inversion": Set   `colors.webpage.darkmode.algorithm` accordingly.  -
+# "With selective image inversion": Set
+# `colors.webpage.darkmode.policy.images` to `smart`.  - "With selective
+# inversion of non-image elements": Set
+# `colors.webpage.darkmode.threshold.text` to 150 and
+# `colors.webpage.darkmode.threshold.background` to 205.  - "With
+# selective inversion of everything": Combines the two variants   above.
+# Type: Bool
+c.colors.webpage.darkmode.enabled = False
+
+# Which algorithm to use for modifying how colors are rendered with
+# darkmode. The `lightness-cielab` value was added with QtWebEngine 5.14
+# and is treated like `lightness-hsl` with older QtWebEngine versions.
+# Type: String
+# Valid values:
+#   - lightness-cielab: Modify colors by converting them to CIELAB color space and inverting the L value. Not available with Qt < 5.14.
+#   - lightness-hsl: Modify colors by converting them to the HSL color space and inverting the lightness (i.e. the "L" in HSL).
+#   - brightness-rgb: Modify colors by subtracting each of r, g, and b from their maximum value.
+c.colors.webpage.darkmode.algorithm = 'lightness-cielab'
+
+# Threshold for inverting background elements with dark mode. Background
+# elements with brightness above this threshold will be inverted, and
+# below it will be left as in the original, non-dark-mode page. Set to
+# 256 to never invert the color or to 0 to always invert it. Note: This
+# behavior is the opposite of `colors.webpage.darkmode.threshold.text`!
+# Type: Int
+c.colors.webpage.darkmode.threshold.background = 0
 
 # Default font families to use. Whenever "default_family" is used in a
 # font setting, it's replaced with the fonts listed here. If set to an
