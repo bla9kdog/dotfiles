@@ -1,15 +1,22 @@
 set font "JetBrainsMono Nerd Font Mono 9"
-set default-bg "#1f1f24" #00
-set default-fg "#838991" #01
+set default-bg "#1f1f24"
+set default-fg "#838991"
 
-set statusbar-fg "#838991" #04
-set statusbar-bg "#34353b" #01
+set statusbar-fg "#838991"
+set statusbar-bg "#34353b"
 
-set inputbar-bg "#34353b" #00 currently not used
-set inputbar-fg "#FFFFFF" #02
+set inputbar-bg "#34353b"
+set inputbar-fg "#FFFFFF"
 
 set recolor "false"
-set recolor-lightcolor "#1f1f24" #00
-set recolor-darkcolor "#ffffff" #06
+set recolor-lightcolor "#1f1f24"
+set recolor-darkcolor "#ffffff"
 set recolor-reverse-video "true"
 set recolor-keephue "true"
+
+set completion-group-bg         "#34353b"
+set completion-group-fg         "#ffffff"
+set completion-bg               "#1f1f24"
+set completion-fg               "#ffffff"
+set completion-highlight-bg     "#43454b"
+set completion-highlight-fg     "#ffffff"

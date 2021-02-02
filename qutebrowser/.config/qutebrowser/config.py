@@ -275,6 +275,11 @@ c.tabs.padding = {'bottom': 8, 'left': 8, 'right': 8, 'top': 8}
 # Type: Dict
 c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}', 'g': 'https://www.google.com/search?q={}', 'aw': 'https:wiki.archlinux.org/?search={}', 'r': 'https://reddit.com/r/{}', 'yt': 'https://www.youtube.com/results?search_query={}'}
 
+# Text color of the completion widget. May be a single color to use for
+# all columns or a list of three colors, one for each column.
+# Type: List of QtColor, or QtColor
+c.colors.completion.fg = ['white', 'white', 'white']
+
 # Background color of the completion widget for odd rows.
 # Type: QssColor
 c.colors.completion.odd.bg = '#1f1f24'
