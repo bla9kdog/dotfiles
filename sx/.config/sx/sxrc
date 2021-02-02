@@ -1,4 +1,4 @@
-hsetroot -solid "#19191d"
+hsetroot -solid "#1c1c20"
 picom --config ~/.config/picom/picom.conf &
 source ~/.config/zsh/.zprofile
 xrdb -m ~/.config/X/Xresources
