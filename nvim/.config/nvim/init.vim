@@ -69,6 +69,11 @@ let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 highlight! link NERDTreeFlags NERDTreeDir
 
+" NERDCommenter
+
+nmap <C-_>   <Plug>NERDCommenterToggle
+vmap <C-_>   <Plug>NERDCommenterToggle<CR>gv
+
 " Airline
 
 let g:airline_powerline_fonts = 1
