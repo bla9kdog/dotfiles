@@ -38,6 +38,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'arzg/vim-colors-xcode'
+Plug 'Chiel92/vim-autoformat'
 call plug#end()
 
 colorscheme xcodedarkhc
@@ -48,6 +49,11 @@ set tabstop=4
 set softtabstop=4
 set shiftwidth=4
 set expandtab
+
+let g:autoformat_autoindent = 0
+let g:autoformat_retab = 0
+let g:autoformat_remove_trailing_spaces = 0
+au BufWrite * :Autoformat
 
 " CoC
 
@@ -65,6 +71,9 @@ let $FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --layout reverse --ma
 
 " NERDTree
 
+autocmd VimEnter * NERDTree | wincmd p
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
+    \ quit | endif
 map <F3> :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
@@ -74,6 +83,10 @@ highlight! link NERDTreeFlags NERDTreeDir
 
 nmap <C-_>   <Plug>NERDCommenterToggle
 vmap <C-_>   <Plug>NERDCommenterToggle<CR>gv
+
+" Python
+
+nmap <F5> <Esc>:w<CR>:!clear;python %<CR>
 
 " Airline
 
