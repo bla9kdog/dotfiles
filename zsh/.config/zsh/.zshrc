@@ -58,7 +58,7 @@ bindkey '^[[B' history-substring-search-down
 
 # Autosuggestions
 
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=8,bold"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=0"
 bindkey '^ ' autosuggest-accept
 
 # Prompt
