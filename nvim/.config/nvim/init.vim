@@ -8,6 +8,7 @@ set mouse=a
 set noruler
 set scrolloff=3
 set termguicolors
+set title
 
 " Plugins initialization
 
