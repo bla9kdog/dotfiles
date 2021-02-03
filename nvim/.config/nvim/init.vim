@@ -82,7 +82,7 @@ vmap <C-_>   <Plug>NERDCommenterToggle<CR>gv
 
 " Python
 
-nmap <F5> <Esc>:w<CR>:!clear;python %<CR>
+nmap <F5> <Esc>:w<CR>:!clear > /dev/pts/0;python %<CR>
 
 " Airline
 
