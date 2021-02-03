@@ -73,6 +73,7 @@ let $FZF_DEFAULT_OPTS="--ansi --preview-window 'right:60%' --layout reverse --ma
 map <F3> :NERDTreeToggle<CR>
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
+let NERDTreeShowHidden = 1
 highlight! link NERDTreeFlags NERDTreeDir
 
 " NERDCommenter
