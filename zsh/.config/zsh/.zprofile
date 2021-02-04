@@ -17,6 +17,7 @@ export WEECHAT_HOME="$XDG_CONFIG_HOME"/weechat
 export NPM_CONFIG_USERCONFIG=$XDG_CONFIG_HOME/npm/npmrc
 export LESSHISTFILE=-
 export GIT=$XDG_CONFIG_HOME/git/config
+export CARGO_HOME="$XDG_DATA_HOME"/cargo
 export SUBVERSION_HOME=$XDG_CONFIG_HOME/subversion
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export GOPATH="$XDG_DATA_HOME"/go
