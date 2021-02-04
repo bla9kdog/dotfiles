@@ -226,6 +226,67 @@ c.prompt.radius = 0
 #   - overlay: Show an overlay scrollbar. On macOS, this is unavailable and equal to `when-searching`; with the QtWebKit backend, this is equal to `never`. Enabling/disabling overlay scrollbars requires a restart.
 c.scrolling.bar = 'never'
 
+# Languages to use for spell checking. You can check for available
+# languages and install dictionaries using scripts/dictcli.py. Run the
+# script with -h/--help for instructions.
+# Type: List of String
+# Valid values:
+#   - af-ZA: Afrikaans (South Africa)
+#   - bg-BG: Bulgarian (Bulgaria)
+#   - ca-ES: Catalan (Spain)
+#   - cs-CZ: Czech (Czech Republic)
+#   - da-DK: Danish (Denmark)
+#   - de-DE: German (Germany)
+#   - el-GR: Greek (Greece)
+#   - en-AU: English (Australia)
+#   - en-CA: English (Canada)
+#   - en-GB: English (United Kingdom)
+#   - en-US: English (United States)
+#   - es-ES: Spanish (Spain)
+#   - et-EE: Estonian (Estonia)
+#   - fa-IR: Farsi (Iran)
+#   - fo-FO: Faroese (Faroe Islands)
+#   - fr-FR: French (France)
+#   - he-IL: Hebrew (Israel)
+#   - hi-IN: Hindi (India)
+#   - hr-HR: Croatian (Croatia)
+#   - hu-HU: Hungarian (Hungary)
+#   - id-ID: Indonesian (Indonesia)
+#   - it-IT: Italian (Italy)
+#   - ko: Korean
+#   - lt-LT: Lithuanian (Lithuania)
+#   - lv-LV: Latvian (Latvia)
+#   - nb-NO: Norwegian (Norway)
+#   - nl-NL: Dutch (Netherlands)
+#   - pl-PL: Polish (Poland)
+#   - pt-BR: Portuguese (Brazil)
+#   - pt-PT: Portuguese (Portugal)
+#   - ro-RO: Romanian (Romania)
+#   - ru-RU: Russian (Russia)
+#   - sh: Serbo-Croatian
+#   - sk-SK: Slovak (Slovakia)
+#   - sl-SI: Slovenian (Slovenia)
+#   - sq: Albanian
+#   - sr: Serbian
+#   - sv-SE: Swedish (Sweden)
+#   - ta-IN: Tamil (India)
+#   - tg-TG: Tajik (Tajikistan)
+#   - tr-TR: Turkish (Turkey)
+#   - uk-UA: Ukrainian (Ukraine)
+#   - vi-VN: Vietnamese (Viet Nam)
+c.spellcheck.languages = []
+
+# Padding (in pixels) for the statusbar.
+# Type: Padding
+c.statusbar.padding = {'bottom': 2, 'left': 0, 'right': 0, 'top': 2}
+
+# Position of the status bar.
+# Type: VerticalPosition
+# Valid values:
+#   - top
+#   - bottom
+c.statusbar.position = 'bottom'
+
 # Open new tabs (middleclick/ctrl+click) in the background.
 # Type: Bool
 c.tabs.background = True
@@ -386,6 +447,10 @@ c.colors.statusbar.passthrough.bg = '#43454b'
 # Background color of the statusbar in private browsing mode.
 # Type: QssColor
 c.colors.statusbar.private.bg = '#838991'
+
+# Background color of the statusbar in command mode.
+# Type: QssColor
+c.colors.statusbar.command.bg = '#1f1f24'
 
 # Background color of the statusbar in caret mode with a selection.
 # Type: QssColor
