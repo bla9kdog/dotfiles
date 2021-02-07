@@ -39,6 +39,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'arzg/vim-colors-xcode'
 Plug 'Chiel92/vim-autoformat'
+Plug 'jiangmiao/auto-pairs'
 call plug#end()
 
 colorscheme xcodedarkhc
