@@ -62,10 +62,6 @@ bindkey '^[[B' history-substring-search-down
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=0"
 bindkey '^ ' autosuggest-accept
 
-# Vim Mode
-
-MODE_CURSOR_VIINS="blinking bar"
-
 # Prompt
 
 setopt prompt_subst
