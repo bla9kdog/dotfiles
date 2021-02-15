@@ -170,7 +170,7 @@ config.set('content.notifications', False, 'https://www.programmersought.com')
 # Directory to save downloads to. If unset, a sensible OS-specific
 # default is used.
 # Type: Directory
-c.downloads.location.directory = '/home/bla9kdog/dl'
+c.downloads.location.directory = '/home/me/dl'
 
 # Editor (and arguments) to use for the `edit-*` commands. The following
 # placeholders are defined:  * `{file}`: Filename of the file to be
@@ -555,10 +555,6 @@ c.colors.tabs.pinned.selected.even.bg = '#37b66a'
 # color).
 # Type: QtColor
 c.colors.webpage.bg = 'white'
-
-# Force `prefers-color-scheme: dark` colors for websites.
-# Type: Bool
-c.colors.webpage.prefers_color_scheme_dark = False
 
 # Render all web contents using a dark theme. Example configurations
 # from Chromium's `chrome://flags`:  - "With simple HSL/CIELAB/RGB-based
