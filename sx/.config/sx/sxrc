@@ -1,8 +1,9 @@
 picom --config ~/.config/picom/picom.conf &
-hsetroot -solid "#1c1c20"
+hsetroot -solid "#1f1f24"
 source ~/.config/zsh/.zprofile
 xrdb -m ~/.config/X/Xresources
 xset r rate 300 50
 xmodmap ~/.config/X/Xmodmap
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 slstatus &
 exec dwm
