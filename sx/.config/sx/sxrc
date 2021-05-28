@@ -4,6 +4,8 @@ source ~/.config/zsh/.zprofile
 xrdb -m ~/.config/X/Xresources
 xset r rate 300 50
 xmodmap ~/.config/X/Xmodmap
+xrandr --setprovideroutputsource modesetting NVIDIA-0
+xrandr --auto
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 slstatus &
 exec dwm

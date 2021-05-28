@@ -157,7 +157,7 @@ config.set('content.javascript.enabled', True, 'qute://*/*')
 #   - true
 #   - false
 #   - ask
-config.set('content.notifications', True, 'https://www.reddit.com')
+config.set('content.notifications.enabled', True, 'https://www.reddit.com')
 
 # Allow websites to show notifications.
 # Type: BoolAsk
@@ -165,7 +165,7 @@ config.set('content.notifications', True, 'https://www.reddit.com')
 #   - true
 #   - false
 #   - ask
-config.set('content.notifications', False, 'https://www.programmersought.com')
+config.set('content.notifications.enabled', False, 'https://www.programmersought.com')
 
 # Directory to save downloads to. If unset, a sensible OS-specific
 # default is used.
