@@ -30,7 +30,7 @@ Plug 'Townk/vim-autoclose'
 Plug 'tpope/vim-surround'
 Plug 'valloric/MatchTagAlways'
 Plug 'myusuf3/numbers.vim'
-Plug 'ap/vim-css-color'
+Plug 'lilydjwg/colorizer'
 Plug 'michaeljsmith/vim-indent-object'
 Plug 'jeetsukumaran/vim-indentwise'
 Plug 'preservim/nerdtree'
@@ -40,6 +40,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'arzg/vim-colors-xcode'
 Plug 'Chiel92/vim-autoformat'
 Plug 'jiangmiao/auto-pairs'
+Plug 't9md/vim-choosewin'
 call plug#end()
 
 colorscheme xcodedarkhc
@@ -91,3 +92,10 @@ nmap <F5> <Esc>:w<CR>:!clear > /dev/pts/0;python %<CR>
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'base16'
 let g:airline#extensions#whitespace#enabled = 0
+
+" Window Chooser ------------------------------
+
+" mapping
+nmap  -  <Plug>(choosewin)
+" show big letters
+let g:choosewin_overlay_enable = 1

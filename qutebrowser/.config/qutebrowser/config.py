@@ -334,7 +334,7 @@ c.tabs.padding = {'bottom': 8, 'left': 8, 'right': 8, 'top': 8}
 # the search engine name to the search term, e.g. `:open google
 # qutebrowser`.
 # Type: Dict
-c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}', 'aw': 'https:wiki.archlinux.org/?search={}', 'g': 'https://www.google.com/search?q={}', 'r': 'https://reddit.com/r/{}', 'yt': 'https://www.youtube.com/results?search_query={}', 'kp': 'https://www.kupujemprodajem.com/search.php?action=list&submit%5Bsearch%5D=Traži&dummy=name&data%5Bkeywords%5D={}'}
+c.url.searchengines = {'DEFAULT': 'https://duckduckgo.com/?q={}', 'aw': 'https:wiki.archlinux.org/?search={}', 'aur': 'https://aur.archlinux.org/packages/?O=0&K={}',  'g': 'https://www.google.com/search?q={}', 'r': 'https://reddit.com/r/{}', 'yt': 'https://www.youtube.com/results?search_query={}', 'kp': 'https://www.kupujemprodajem.com/search.php?action=list&submit%5Bsearch%5D=Traži&dummy=name&data%5Bkeywords%5D={}'}
 
 # Text color of the completion widget. May be a single color to use for
 # all columns or a list of three colors, one for each column.
