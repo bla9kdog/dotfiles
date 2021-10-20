@@ -26,7 +26,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'mattn/emmet-vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-Plug 'Townk/vim-autoclose'
+Plug 'alvan/vim-closetag'
 Plug 'tpope/vim-surround'
 Plug 'valloric/MatchTagAlways'
 Plug 'myusuf3/numbers.vim'
