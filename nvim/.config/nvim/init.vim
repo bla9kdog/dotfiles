@@ -23,6 +23,7 @@ endif
 call plug#begin('~/.config/nvim/plugged')
 Plug 'junegunn/fzf', { 'dir': '~/.config/fzf', 'do': './install --all --xdg' }
 Plug 'junegunn/fzf.vim'
+Plug 'ryanoasis/vim-devicons'
 Plug 'mattn/emmet-vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
@@ -93,9 +94,20 @@ let g:airline_powerline_fonts = 1
 let g:airline_theme = 'base16'
 let g:airline#extensions#whitespace#enabled = 0
 
-" Window Chooser ------------------------------
+" Window Chooser
 
 " mapping
 nmap  -  <Plug>(choosewin)
 " show big letters
 let g:choosewin_overlay_enable = 1
+
+" Devicons
+
+" loading the plugin
+let g:webdevicons_enable = 1
+" adding the flags to NERDTree
+let g:webdevicons_enable_nerdtree = 1
+" adding to vim-airline's tabline
+let g:webdevicons_enable_airline_tabline = 1
+" adding to vim-airline's statusline
+let g:webdevicons_enable_airline_statusline = 1
