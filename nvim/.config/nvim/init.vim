@@ -9,6 +9,7 @@ set noruler
 set scrolloff=3
 set termguicolors
 set title
+filetype plugin on
 
 " Plugins initialization
 
@@ -24,6 +25,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'junegunn/fzf', { 'dir': '~/.config/fzf', 'do': './install --all --xdg' }
 Plug 'junegunn/fzf.vim'
 Plug 'ryanoasis/vim-devicons'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'mattn/emmet-vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
@@ -39,8 +41,7 @@ Plug 'preservim/nerdcommenter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'arzg/vim-colors-xcode'
-Plug 'Chiel92/vim-autoformat'
-Plug 'jiangmiao/auto-pairs'
+Plug 'cohama/lexima.vim'
 Plug 't9md/vim-choosewin'
 call plug#end()
 
@@ -63,6 +64,7 @@ inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 inoremap <silent><expr> <c-space> coc#refresh()
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+nnoremap <esc> :noh<return><esc>
 
 " Fzf
 
@@ -81,9 +83,15 @@ let g:NERDTreeDirArrowCollapsible = '▾'
 let NERDTreeShowHidden = 1
 let NERDTreeIgnore=['\\.swo$', '\\.swp$', '\\.git']
 highlight! link NERDTreeFlags NERDTreeDir
+highlight! Directory guifg=#aeb7c0 ctermfg=red
 
 " Exit Vim if NERDTree is the only window remaining in the only tab.
 autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+" Nerdtree Syntax Highlight
+
+let g:NERDTreeHighlightFolders = 1 
+let g:NERDTreeLimitedSyntax = 1
 
 " NERDCommenter
 
