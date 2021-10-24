@@ -13,6 +13,11 @@
 # Change the argument to True to still load settings configured via autoconfig.yml
 config.load_autoconfig(False)
 
+# Aliases for commands. The keys of the given dictionary are the
+# aliases, while the values are the commands they map to.
+# Type: Dict
+c.aliases = {'q': 'close', 'qa': 'quit', 'w': 'session-save', 'wq': 'quit --save', 'wqa': 'quit --save'}
+
 # How to open links in an existing instance if a new one is launched.
 # This happens when e.g. opening a link from a terminal. See
 # `new_instance_open_target_window` to customize in which window the
@@ -324,6 +329,11 @@ c.statusbar.position = 'bottom'
 # Type: Bool
 c.tabs.background = True
 
+# Scaling factor for favicons in the tab bar. The tab size is unchanged,
+# so big favicons also require extra `tabs.padding`.
+# Type: Float
+c.tabs.favicons.scale = 1.0
+
 # When to show favicons in the tab bar. When switching this from never
 # to always/pinned, note that favicons might not be loaded yet, thus
 # tabs might require a reload to display them.
@@ -347,6 +357,10 @@ c.tabs.new_position.unrelated = 'last'
 # Padding (in pixels) around text for tabs.
 # Type: Padding
 c.tabs.padding = {'bottom': 8, 'left': 8, 'right': 8, 'top': 8}
+
+# Maximum stack size to remember for tab switches (-1 for no maximum).
+# Type: Int
+c.tabs.focus_stack_size = 10
 
 # Search engines which can be used via the address bar.  Maps a search
 # engine name (such as `DEFAULT`, or `ddg`) to a URL with a `{}`

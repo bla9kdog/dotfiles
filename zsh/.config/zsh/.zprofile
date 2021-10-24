@@ -1,6 +1,5 @@
 export EDITOR="nvim"
 export TERMINAL="st"
-export BROWSER="qutebrowser"
 export LS_COLORS
 
 export PATH="$HOME/.local/bin:$PATH"
