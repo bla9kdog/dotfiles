@@ -29,6 +29,7 @@ alias cp="cp -i"
 alias mv="mv -i"
 alias rm="rm -i"
 
+alias add="git add"
 alias addup="git add -u"
 alias addall="git add ."
 alias commit="git commit -m"
