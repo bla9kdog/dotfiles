@@ -1,0 +1,30 @@
+{
+    "coc.preferences.formatOnSaveFiletypes": ["css", "html", "markdown", "javascript", "javascriptreact", "typescript", "typescriptreact"],
+    "coc.preferences.formatOnType": true,
+    "tsserver.formatOnType": true,
+    "suggest.noselect": false,
+    "pyright.enable": true,
+      "suggest.floatConfig": {
+    "border": true,
+    "winblend": 15,
+    "borderhighlight": "FloatBorder"
+  },
+  "hover.floatConfig": {
+    "border": true,
+    "winblend": 15,
+    "borderhighlight": "FloatBorder"
+  },
+  "signature.floatConfig": {
+    "border": true,
+    "winblend": 15,
+    "borderhighlight": "FloatBorder"
+  },
+  "diagnostic.floatConfig": {
+    "border": true,
+    "winblend": 15,
+    "borderhighlight": "FloatBorder"
+  },
+  "eslint.autoFixOnSave": true,
+  "eslint.filetypes": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "coc.preferences.colorSupport": true
+}
