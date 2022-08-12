@@ -46,4 +46,4 @@ o.expandtab = true
 -- Python path
 g.python3_host_prog = '/opt/homebrew/bin/python3'
 
-vim.cmd('source ~/.config/nvim/lua/theme/theme.vim')
+vim.cmd('source ~/.config/nvim/theme/theme.vim')
