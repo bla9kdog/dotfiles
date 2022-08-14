@@ -21,5 +21,5 @@ export SUBVERSION_HOME=$XDG_CONFIG_HOME/subversion
 export GNUPGHOME="$XDG_DATA_HOME"/gnupg
 export GOPATH="$XDG_DATA_HOME"/go
 export NODE_REPL_HISTORY="$XDG_DATA_HOME"/node_repl_history
-export VIMINIT='if has("nvim") | so $XDG_CONFIG_HOME/nvim/init.vim | else | set nocp | so $XDG_CONFIG_HOME/vim/vimrc | endif'
+export VIMINIT='if has("nvim") | so $XDG_CONFIG_HOME/nvim/init.lua| else | set nocp | so $XDG_CONFIG_HOME/vim/vimrc | endif'
 
