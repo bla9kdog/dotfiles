@@ -1,7 +1,6 @@
 LS_COLORS='di=36:fi=0:ln=31:pi=5:so=5:bd=5:cd=5:or=31:'
 export LS_COLORS
 export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git --exclude .vim'
-export PYTHONSTARTUP=~/.config/python/pythonrc
 
 # Plugins
 
