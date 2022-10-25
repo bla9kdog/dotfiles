@@ -25,8 +25,11 @@ return require('packer').startup(function(use)
       end,
     })
 
-    -- Polyglot
-    use('sheerun/vim-polyglot')
+    -- Treesitter
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+    }
 
     -- Emmet
     use('mattn/emmet-vim')
@@ -65,9 +68,6 @@ return require('packer').startup(function(use)
         end,
     })
 
-    -- Colorscheme
-    use { 'catppuccin/nvim', as = 'catppuccin' }
-
     -- Color highlighting
     use({
         'rrethy/vim-hexokinase',
@@ -94,9 +94,42 @@ return require('packer').startup(function(use)
 
     -- Status line
     use({
-        'tamton-aquib/staline.nvim',
+        'itchyny/lightline.vim',
         config = function()
-          require('plugins.staline')
+          require('plugins.lightline')
         end,
     })
+
+    -- SCNVIM
+    use({
+        'davidgranstrom/scnvim',
+        config = function()
+          require('plugins.scnvim')
+        end,
+    })
+
+    -- Nvim CMP
+    use { 
+      'hrsh7th/nvim-cmp',
+      requires = {
+        {
+          'quangnguyen30192/cmp-nvim-tags',
+        }
+      },
+      config = function ()
+          require('plugins.cmp')
+      end,
+    }
+
+    -- LuaSnip
+    use({
+        'L3MON4D3/LuaSnip',
+        config = function()
+          require('plugins.luasnip')
+        end,
+      })
+
+    -- LuaSnip CMP
+    use('saadparwaiz1/cmp_luasnip')
+
 end)
