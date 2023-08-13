@@ -3,7 +3,7 @@ syntax reset
 let g:colors_name = "my-scheme"
 set background=dark
 set t_Co=256
-hi Normal guifg=#ffffff ctermbg=NONE guibg=#1f1f24 gui=NONE
+hi Normal guifg=#ffffff ctermbg=NONE guibg=#0a0a0a gui=NONE
 
 hi DiffText guifg=#f38ba8 guibg=NONE
 hi ErrorMsg guifg=#f38ba8 guibg=NONE
@@ -18,7 +18,7 @@ hi cssIdentifier guifg=#f38ba8 guibg=NONE
 hi cssImportant guifg=#f38ba8 guibg=NONE
 hi Type guifg=#f38ba8 guibg=NONE
 hi Identifier guifg=#f38ba8 guibg=NONE
-hi PMenuSel guifg=#a6e3a1 guibg=NONE
+hi PMenuSel guifg=#a6e3a1 guibg=#0a0a0a
 hi Constant guifg=#a6e3a1 guibg=NONE
 hi Repeat guifg=#a6e3a1 guibg=NONE
 hi DiffAdd guifg=#a6e3a1 guibg=NONE
@@ -58,19 +58,23 @@ hi Statement guifg=#94e2d5 guibg=NONE
 hi Operator guifg=#94e2d5 guibg=NONE
 hi cssAttr guifg=#94e2d5 guibg=NONE
 
-
-hi Pmenu guifg=#ffffff guibg=#43454b
-hi SignColumn guibg=#1f1f24
+hi PMenu guifg=#ffffff guibg=#0a0a0a
+hi SignColumn guibg=#0a0a0a
+hi BufferCurrentSign guibg=#13151a guifg=#13151a
+hi BufferCurrentSignRight guibg=#13151a guifg=#13151a
+hi BufferInactiveSign guibg=#0a0a0a guifg=#0a0a0a
+hi BufferInactiveSignRight guibg=#0a0a0a guifg=#0a0a0a
 hi Title guifg=#ffffff
-hi LineNr guifg=#999999 guibg=#1f1f24
-hi NonText guifg=#838991 guibg=#1f1f24
+hi LineNr guifg=#999999 guibg=#0a0a0a
+hi NonText guifg=#838991 guibg=#0a0a0a
 hi Comment guifg=#838991 gui=italic
 hi SpecialComment guifg=#838991 gui=italic guibg=NONE
-hi CursorLine guibg=#43454b
-hi TabLineFill gui=NONE guibg=#43454b
-hi TabLine guifg=#999999 guibg=#43454b gui=NONE
+hi CursorLine guibg=#13151a
+hi TabLineFill gui=NONE guibg=#0a0a0a
+hi TabLine guifg=#43454b guibg=#0a0a0a gui=NONE
+hi TabLineSel guibg=#13151A guifg=#c678dd gui=bold
 hi StatusLine gui=bold guibg=#43454b guifg=#ffffff
-hi StatusLineNC gui=NONE guibg=#1f1f24 guifg=#ffffff
+hi StatusLineNC gui=NONE guibg=#0a0a0a guifg=#ffffff
 hi Search guibg=#838991 guifg=#ffffff
 hi VertSplit gui=NONE guifg=#43454b guibg=NONE
 hi Visual gui=NONE guibg=#43454b

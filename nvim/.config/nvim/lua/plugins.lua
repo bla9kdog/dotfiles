@@ -1,4 +1,3 @@
-
 ----------------------------------------------------------------
 -- Plugins
 ----------------------------------------------------------------
@@ -9,20 +8,19 @@ local execute = vim.api.nvim_command
 local fn = vim.fn
 
 return require('packer').startup(function(use)
-
     -- Package manager
     use('wbthomason/packer.nvim')
 
     -- Telescope
     use({
-      'nvim-telescope/telescope.nvim',
-      requires = {
-        { 'nvim-lua/plenary.nvim' },
-        { 'kyazdani42/nvim-web-devicons' },
-      },
-      config = function()
-        require('plugins.telescope')
-      end,
+        'nvim-telescope/telescope.nvim',
+        requires = {
+            { 'nvim-lua/plenary.nvim' },
+            { 'kyazdani42/nvim-web-devicons' },
+        },
+        config = function()
+            require('plugins.telescope')
+        end,
     })
 
     -- Treesitter
@@ -31,23 +29,33 @@ return require('packer').startup(function(use)
         run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
     }
 
-    -- Emmet
-    use('mattn/emmet-vim')
-
     -- Highlight enclosing tags
     use('valloric/MatchTagAlways')
 
-    -- Insert/delete brackets, parenthesis, quotes...
-    use('jiangmiao/auto-pairs')
+    -- Auto Pairs
+    use({
+        'windwp/nvim-autopairs',
+        config = function()
+            require('plugins.autopairs')
+        end,
+    })
 
     -- Toggling line numbers
     use('myusuf3/numbers.vim')
+
+    -- Indent
+    use({
+        'lukas-reineke/indent-blankline.nvim',
+        config = function()
+            require('plugins.indent')
+        end,
+    })
 
     -- Code commenting
     use({
         'preservim/nerdcommenter',
         config = function()
-          require('plugins.nerdcommenter')
+            require('plugins.nerdcommenter')
         end,
     })
 
@@ -55,81 +63,138 @@ return require('packer').startup(function(use)
     use({
         't9md/vim-choosewin',
         config = function()
-          require('plugins.vim-choosewin')
-        end,
-    })
-
-    -- COC (coc-html coc-css coc-tsserver coc-prettier coc-emmet coc-eslint coc-pyright coc-json)
-    use({
-        'neoclide/coc.nvim',
-        branch = 'release',
-        config = function()
-          require('plugins.coc')
+            require('plugins.vim-choosewin')
         end,
     })
 
     -- Color highlighting
     use({
-        'rrethy/vim-hexokinase',
+        'norcalli/nvim-colorizer.lua',
         config = function()
-          require('plugins.hexokinase')
+            require('plugins.colorizer')
         end,
-      })
+    })
 
     -- Floating terminal
     use({
-        'voldikss/vim-floaterm',
+        'numToStr/FTerm.nvim',
         config = function()
-          require('plugins.vim-floaterm')
+            require('plugins.fterm')
         end,
-      })
+    })
 
     -- File browser
     use({
         'kyazdani42/nvim-tree.lua',
         config = function()
-          require('plugins.nvim-tree')
+            require('plugins.nvim-tree')
+        end,
+    })
+
+    --Tabline
+    use({
+        'romgrk/barbar.nvim',
+        config = function()
+            require('plugins.tabline')
         end,
     })
 
     -- Status line
     use({
-        'itchyny/lightline.vim',
+        'nvim-lualine/lualine.nvim',
         config = function()
-          require('plugins.lightline')
+            require('plugins.lualine')
         end,
     })
 
-    -- SCNVIM
+    -- Git
     use({
-        'davidgranstrom/scnvim',
+        'lewis6991/gitsigns.nvim',
         config = function()
-          require('plugins.scnvim')
+            require('plugins.git')
         end,
     })
 
-    -- Nvim CMP
-    use { 
-      'hrsh7th/nvim-cmp',
-      requires = {
-        {
-          'quangnguyen30192/cmp-nvim-tags',
-        }
-      },
-      config = function ()
-          require('plugins.cmp')
-      end,
-    }
+    -- LSP
+    use({
+        'williamboman/mason.nvim',
+        config = function()
+            require('plugins.lsp')
+        end,
+    })
 
-    -- LuaSnip
+    use({
+        'williamboman/mason-lspconfig.nvim',
+        config = function()
+            require('plugins.lsp')
+        end,
+    })
+
+    use({
+        'neovim/nvim-lspconfig',
+        config = function()
+            require('plugins.lsp')
+        end,
+    })
+
+    -- Autocomplete, snippets...
+    use({
+        'hrsh7th/nvim-cmp',
+        config = function()
+            require('plugins.cmp')
+        end,
+    })
+
+    use({
+        'hrsh7th/cmp-nvim-lsp',
+        config = function()
+            require('plugins.cmp')
+        end,
+    })
+
     use({
         'L3MON4D3/LuaSnip',
         config = function()
-          require('plugins.luasnip')
+            require('plugins.cmp')
         end,
-      })
+    })
 
-    -- LuaSnip CMP
-    use('saadparwaiz1/cmp_luasnip')
+    use({
+        'saadparwaiz1/cmp_luasnip',
+        config = function()
+            require('plugins.cmp')
+        end,
+    })
 
+    use({
+        'hrsh7th/cmp-buffer',
+        config = function()
+            require('plugins.cmp')
+        end,
+    })
+
+    use({
+        'hrsh7th/cmp-path',
+        config = function()
+            require('plugins.cmp')
+        end,
+    })
+
+    use({
+        'hrsh7th/cmp-cmdline',
+        config = function()
+            require('plugins.cmp')
+        end,
+    })
+
+    use('rafamadriz/friendly-snippets')
+
+    -- Format on save
+
+    use({
+        'lukas-reineke/lsp-format.nvim',
+        config = function()
+            require('plugins.lsp')
+        end,
+    })
 end)

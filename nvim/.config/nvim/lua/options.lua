@@ -24,7 +24,7 @@ o.timeoutlen = 500
 o.updatetime = 300
 
 -- # of lines below/above the cursor
-o.scrolloff=8
+o.scrolloff = 8
 
 -- User experience
 o.number = true
@@ -38,13 +38,17 @@ o.softtabstop = 4
 o.showtabline = 2
 o.laststatus = 2
 o.shiftwidth = 4
-o.wrap = false
+o.wrap = true
 o.splitbelow = true
 o.showmode = false
 o.expandtab = true
 
 -- Python path
-g.python3_host_prog = '/opt/homebrew/bin/python3'
+g.python3_host_prog = '/usr/bin/python3'
+-- g.python3_host_prog = '/opt/homebrew/bin/python3'
 
 -- Theme path
 vim.cmd('source ~/.config/nvim/theme/theme.vim')
+
+-- Full screen help buffer
+vim.cmd('augroup HelpBuffer | au! filetype help only | augroup END')
