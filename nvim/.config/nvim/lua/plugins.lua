@@ -190,7 +190,6 @@ return require('packer').startup(function(use)
     use('rafamadriz/friendly-snippets')
 
     -- Format on save
-
     use({
         'lukas-reineke/lsp-format.nvim',
         config = function()
