@@ -8,7 +8,7 @@ local function on_attach(bufnr)
     end
 
     -- BEGIN_DEFAULT_ON_ATTACH
-    vim.keymap.set('n', '<C-]>', api.tree.change_root_to_node, opts('CD'))
+    vim.keymap.set('n', 'C', api.tree.change_root_to_node, opts('CD'))
     vim.keymap.set('n', '<C-e>', api.node.open.replace_tree_buffer, opts('Open: In Place'))
     vim.keymap.set('n', '<C-k>', api.node.show_info_popup, opts('Info'))
     vim.keymap.set('n', '<C-r>', api.fs.rename_sub, opts('Rename: Omit Filename'))
@@ -31,13 +31,13 @@ local function on_attach(bufnr)
     vim.keymap.set('n', ']c', api.node.navigate.git.next, opts('Next Git'))
     vim.keymap.set('n', 'd', api.fs.remove, opts('Delete'))
     vim.keymap.set('n', 'D', api.fs.trash, opts('Trash'))
-    vim.keymap.set('n', 'E', api.tree.expand_all, opts('Expand All'))
+    vim.keymap.set('n', 'A', api.tree.expand_all, opts('Expand All'))
     vim.keymap.set('n', 'e', api.fs.rename_basename, opts('Rename: Basename'))
     vim.keymap.set('n', ']e', api.node.navigate.diagnostics.next, opts('Next Diagnostic'))
     vim.keymap.set('n', '[e', api.node.navigate.diagnostics.prev, opts('Prev Diagnostic'))
     vim.keymap.set('n', 'F', api.live_filter.clear, opts('Clean Filter'))
     vim.keymap.set('n', 'f', api.live_filter.start, opts('Filter'))
-    vim.keymap.set('n', 'g?', api.tree.toggle_help, opts('Help'))
+    vim.keymap.set('n', '?', api.tree.toggle_help, opts('Help'))
     vim.keymap.set('n', 'gy', api.fs.copy.absolute_path, opts('Copy Absolute Path'))
     vim.keymap.set('n', 'H', api.tree.toggle_hidden_filter, opts('Toggle Dotfiles'))
     vim.keymap.set('n', 'I', api.tree.toggle_gitignore_filter, opts('Toggle Git Ignore'))
@@ -62,31 +62,7 @@ local function on_attach(bufnr)
     vim.keymap.set('n', '<2-RightMouse>', api.tree.change_root_to_node, opts('CD'))
     -- END_DEFAULT_ON_ATTACH
 
-
-    -- Mappings removed via:
-    --   remove_keymaps
-    --   OR
-    --   view.mappings.list..action = ""
-    --
-    -- The dummy set before del is done for safety, in case a default mapping does not exist.
-    --
-    -- You might tidy things by removing these along with their default mapping.
-    vim.keymap.set('n', 'O', '', { buffer = bufnr })
-    vim.keymap.del('n', 'O', { buffer = bufnr })
-    vim.keymap.set('n', '<2-RightMouse>', '', { buffer = bufnr })
-    vim.keymap.del('n', '<2-RightMouse>', { buffer = bufnr })
-    vim.keymap.set('n', 'D', '', { buffer = bufnr })
-    vim.keymap.del('n', 'D', { buffer = bufnr })
-    vim.keymap.set('n', 'E', '', { buffer = bufnr })
-    vim.keymap.del('n', 'E', { buffer = bufnr })
-
-
-    -- Mappings migrated from view.mappings.list
-    --
     -- You will need to insert "your code goes here" for any mappings with a custom action_cb
-    vim.keymap.set('n', 'A', api.tree.expand_all, opts('Expand All'))
-    vim.keymap.set('n', '?', api.tree.toggle_help, opts('Help'))
-    vim.keymap.set('n', 'C', api.tree.change_root_to_node, opts('CD'))
     vim.keymap.set('n', 'P', function()
         local node = api.tree.get_node_under_cursor()
         print(node.absolute_path)
@@ -100,19 +76,12 @@ require("nvim-tree").setup({
     sort_by = "case_sensitive",
     view = {
         adaptive_size = true,
-        mappings = {
-            list = {
-                { key = "u",     action = "dir_up" },
-                { key = "<C-t>", action = "" },
-                { key = "-",     action = "" },
-            },
-        },
     },
     renderer = {
         group_empty = true,
     },
     filters = {
-        dotfiles = true,
+        dotfiles = false,
     },
 })
 

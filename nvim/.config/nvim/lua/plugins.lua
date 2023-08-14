@@ -53,9 +53,9 @@ return require('packer').startup(function(use)
 
     -- Code commenting
     use({
-        'preservim/nerdcommenter',
+        'numToStr/Comment.nvim',
         config = function()
-            require('plugins.nerdcommenter')
+            require('plugins.comment')
         end,
     })
 
@@ -190,6 +190,7 @@ return require('packer').startup(function(use)
     use('rafamadriz/friendly-snippets')
 
     -- Format on save
+
     use({
         'lukas-reineke/lsp-format.nvim',
         config = function()

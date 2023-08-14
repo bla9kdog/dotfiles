@@ -49,6 +49,3 @@ g.python3_host_prog = '/usr/bin/python3'
 
 -- Theme path
 vim.cmd('source ~/.config/nvim/theme/theme.vim')
-
--- Full screen help buffer
-vim.cmd('augroup HelpBuffer | au! filetype help only | augroup END')
