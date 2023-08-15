@@ -3,17 +3,17 @@ local lualine = require('lualine')
 -- Color table for highlights
 -- stylua: ignore
 local colors = {
-    bg       = '#13151a',
-    fg       = '#bbc2cf',
-    yellow   = '#ECBE7B',
-    cyan     = '#008080',
+    bg       = '#15131a',
+    fg       = '#bac2de',
+    yellow   = '#f9e2af',
+    cyan     = '#94e2d5',
     darkblue = '#081633',
-    green    = '#98be65',
-    orange   = '#FF8800',
-    violet   = '#a9a1e1',
-    magenta  = '#c678dd',
-    blue     = '#51afef',
-    red      = '#ec5f67',
+    green    = '#a6e3a1',
+    orange   = '#fab387',
+    violet   = '#b4befe',
+    magenta  = '#cba6f7',
+    blue     = '#89b4fa',
+    red      = '#f38ba8',
 }
 
 local conditions = {
@@ -34,7 +34,7 @@ local conditions = {
 local config = {
     options = {
         disabled_filetypes = {
-            statusline = { 'neo-tree', 'toggleterm' },
+            statusline = { 'toggleterm' },
             winbar = {},
         },
         component_separators = '',
@@ -66,7 +66,7 @@ local config = {
         lualine_c = {},
         lualine_x = {},
     },
-    extensions = { 'nvim-tree' }
+    extensions = { 'neo-tree' }
 }
 
 -- Inserts a component in lualine_c at left section
@@ -90,7 +90,7 @@ ins_left {
 ins_left {
     -- mode component
     function()
-        return '󰣐'
+        return ''
     end,
     color = function()
         -- auto change color according to neovims mode
@@ -128,9 +128,16 @@ ins_left {
 }
 
 ins_left {
-    'filename',
+    'filetype',
+    icon_only = true,
     cond = conditions.buffer_not_empty,
-    color = { fg = colors.magenta, gui = 'bold' },
+}
+
+ins_left {
+    'filename',
+    padding = { left = 0 },
+    cond = conditions.buffer_not_empty,
+    color = { fg = colors.green, gui = 'bold' },
 }
 
 ins_left { 'location' }
@@ -148,8 +155,6 @@ ins_left {
     },
 }
 
--- Insert mid section. You can make any number of sections in neovim :)
--- for lualine it's any number greater then 2
 ins_left {
     function()
         return '%='
@@ -173,8 +178,8 @@ ins_left {
         end
         return msg
     end,
-    icon = ' LSP:',
-    color = { fg = '#ffffff', gui = 'bold' },
+    icon = ' LSP:',
+    color = { fg = 'colors.fg', gui = 'bold' },
 }
 
 -- Add components to right sections

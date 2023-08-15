@@ -72,14 +72,6 @@ return require('packer').startup(function(use)
         end,
     })
 
-    -- Navigate windows easily
-    use({
-        't9md/vim-choosewin',
-        config = function()
-            require('plugins.vim-choosewin')
-        end,
-    })
-
     -- Color highlighting
     use({
         'NvChad/nvim-colorizer.lua',
@@ -109,6 +101,27 @@ return require('packer').startup(function(use)
         end,
     })
 
+    -- Cmdline
+    use({
+        'folke/noice.nvim',
+        requires = {
+            { 'MunifTanjim/nui.nvim' },
+            { 'rcarriga/nvim-notify' }
+        },
+        config = function()
+            require('plugins.cmdline')
+        end,
+
+    })
+
+    -- Auto Pairs
+    use({
+        'rcarriga/nvim-notify',
+        config = function()
+            require('plugins.notify')
+        end,
+    })
+
     --Tabline
     use({
         'romgrk/barbar.nvim',
@@ -120,6 +133,9 @@ return require('packer').startup(function(use)
     -- Status line
     use({
         'nvim-lualine/lualine.nvim',
+        requires = {
+            { 'kyazdani42/nvim-web-devicons' },
+        },
         config = function()
             require('plugins.lualine')
         end,

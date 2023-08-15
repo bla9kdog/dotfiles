@@ -1,20 +1,6 @@
 local cmp = require('cmp')
 local luasnip = require('luasnip')
 
-vim.api.nvim_set_hl(0, 'MyCursorLine', { fg = '#a6e3a1', bg = '#13151a' })
-vim.api.nvim_set_hl(0, 'CmpItemAbbr', { fg = '#ffffff', bg = 'NONE' })
-vim.api.nvim_set_hl(0, 'CmpItemAbbrMatch', { fg = '#94e2d5', bg = 'NONE' })
-vim.api.nvim_set_hl(0, 'CmpItemAbbrMatchFuzzy', { fg = '#a6e3a1', bg = 'NONE' })
-vim.api.nvim_set_hl(0, 'CmpItemKindText', { fg = '#f9e2af', bg = 'NONE' })
-vim.api.nvim_set_hl(0, 'CmpItemKindVariable', { fg = '#f38ba8', bg = 'NONE' })
-vim.api.nvim_set_hl(0, 'CmpItemKindSnippet', { fg = '#a6e3a1', bg = 'NONE' })
-vim.api.nvim_set_hl(0, 'CmpItemKindFunction', { fg = '#89b4fa', bg = 'NONE' })
-vim.api.nvim_set_hl(0, 'CmpItemKindKeyword', { fg = '#f5c2e7', bg = 'NONE' })
-vim.api.nvim_set_hl(0, 'CmpItemKindClass', { fg = '#94e2d5', bg = 'NONE' })
-vim.api.nvim_set_hl(0, 'CmpItemKindConstructor', { fg = '#999999', bg = 'NONE' })
-vim.api.nvim_set_hl(0, 'CmpItemKindMethod', { fg = '#c678dd', bg = 'NONE' })
-vim.api.nvim_set_hl(0, 'CmpItemKindField', { fg = '#89dceb', bg = 'NONE' })
-
 -- VSCode-style snippets
 require('luasnip.loaders.from_vscode').lazy_load()
 
@@ -84,10 +70,10 @@ cmp.setup({
 
     window = {
         completion = cmp.config.window.bordered {
-            winhighlight = 'Normal:Normal,FloatBorder:FloatBorder,CursorLine:MyCursorLine,Search:None',
+            winhighlight = 'Normal:Pmenu,FloatBorder:FloatBorder,CursorLine:MyCursorLine,Search:None',
         },
         documentation = cmp.config.window.bordered {
-            winhighlight = 'Normal:Normal,FloatBorder:FloatBorder,CursorLine:Visual,Search:None',
+            winhighlight = 'Normal:Pmenu,FloatBorder:FloatBorder,CursorLine:Visual,Search:None',
         },
     },
 

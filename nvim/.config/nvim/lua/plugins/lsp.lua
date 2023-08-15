@@ -1,7 +1,8 @@
 -- Mason Setup
 require('mason').setup()
 require('mason-lspconfig').setup({
-    ensure_installed = { 'lua_ls', 'clangd', 'cssls', 'emmet_language_server', 'html', 'tsserver', 'pyright', 'vimls' }
+    ensure_installed = { 'lua_ls', 'marksman', 'clangd', 'cssls', 'emmet_language_server', 'html', 'tsserver', 'pyright',
+        'vimls' }
 })
 
 -- LSP Format
@@ -32,6 +33,13 @@ require('lspconfig').lua_ls.setup {
     capabilities = capabilities,
     handlers = handlers,
 }
+
+require('lspconfig').marksman.setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    handlers = handlers,
+}
+
 require('lspconfig').clangd.setup {
     on_attach = on_attach,
     capabilities = capabilities,

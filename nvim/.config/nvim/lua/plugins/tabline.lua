@@ -46,5 +46,8 @@ require('barbar').setup {
             -- Requires `nvim-web-devicons` if `true`
             enabled = true,
         },
+    },
+    sidebar_filetypes = {
+        ['neo-tree'] = { event = 'BufWipeout' }
     }
 }

@@ -1,6 +1,8 @@
 local keymap = require('lib.utils').keymap
 
 require("toggleterm").setup({
+    direction = 'horizontal',
+    size = 12,
     winbar = {
         enabled = false,
         name_formatter = function(term) --  term: Terminal
@@ -9,7 +11,7 @@ require("toggleterm").setup({
     },
     persist_mode = false,
     start_in_insert = true,
-    hide_numbers = true
+    hide_numbers = true,
 })
 
 keymap('n', '<C-t>', '<cmd>ToggleTerm<CR>')
