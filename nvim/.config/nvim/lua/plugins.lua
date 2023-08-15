@@ -11,6 +11,14 @@ return require('packer').startup(function(use)
     -- Package manager
     use('wbthomason/packer.nvim')
 
+    -- Colorscheme
+    use({
+        'catppuccin/nvim',
+        config = function()
+            require('plugins.catppuccin')
+        end,
+    })
+
     -- Telescope
     use({
         'nvim-telescope/telescope.nvim',
@@ -40,8 +48,13 @@ return require('packer').startup(function(use)
         end,
     })
 
-    -- Toggling line numbers
-    use('myusuf3/numbers.vim')
+    -- Surround
+    use({
+        'kylechui/nvim-surround',
+        config = function()
+            require('plugins.surround')
+        end,
+    })
 
     -- Indent
     use({
@@ -69,7 +82,7 @@ return require('packer').startup(function(use)
 
     -- Color highlighting
     use({
-        'norcalli/nvim-colorizer.lua',
+        'NvChad/nvim-colorizer.lua',
         config = function()
             require('plugins.colorizer')
         end,
@@ -77,17 +90,22 @@ return require('packer').startup(function(use)
 
     -- Floating terminal
     use({
-        'numToStr/FTerm.nvim',
+        'akinsho/toggleterm.nvim',
         config = function()
-            require('plugins.fterm')
+            require('plugins.toggleterm')
         end,
     })
 
     -- File browser
     use({
-        'kyazdani42/nvim-tree.lua',
+        'nvim-neo-tree/neo-tree.nvim',
+        requires = {
+            { 'nvim-lua/plenary.nvim' },
+            { 'kyazdani42/nvim-web-devicons' },
+            { 'MunifTanjim/nui.nvim' },
+        },
         config = function()
-            require('plugins.nvim-tree')
+            require('plugins.neotree')
         end,
     })
 
@@ -190,11 +208,18 @@ return require('packer').startup(function(use)
     use('rafamadriz/friendly-snippets')
 
     -- Format on save
-
     use({
         'lukas-reineke/lsp-format.nvim',
         config = function()
             require('plugins.lsp')
+        end,
+    })
+
+    -- Color Picker
+    use({
+        'ziontee113/color-picker.nvim',
+        config = function()
+            require('plugins.color-picker')
         end,
     })
 end)

@@ -17,8 +17,13 @@ keymap('n', '<C-j>', ':tabprevious<CR>')
 keymap('n', '<C-k>', ':tabnext<CR>')
 
 -- Resize split
-keymap('n', '<Leader>hd', ':resize -4<CR>')
-keymap('n', '<Leader>hi', ':resize +4<CR>')
-keymap('n', '<Leader>vd', ':vertical resize -4<CR>')
-keymap('n', '<Leader>vi', ':vertical resize +4<CR>')
+keymap('n', '<leader>hd', '<cmd>resize -4<CR>')
+keymap('n', '<leader>hi', '<cmd>resize +4<CR>')
+keymap('n', '<leader>vd', '<cmd>vertical resize -4<CR>')
+keymap('n', '<leader>vi', '<cmd>vertical resize +4<CR>')
 
+-- Hide search highlight
+keymap('n', '<leader>q', '<cmd>noh<CR>')
+
+-- Source file
+keymap('n', '<leader>s', '<cmd>source %<CR>')

@@ -3,7 +3,7 @@ local lualine = require('lualine')
 -- Color table for highlights
 -- stylua: ignore
 local colors = {
-    bg       = '#12151a',
+    bg       = '#13151a',
     fg       = '#bbc2cf',
     yellow   = '#ECBE7B',
     cyan     = '#008080',
@@ -33,7 +33,10 @@ local conditions = {
 -- Config
 local config = {
     options = {
-        -- Disable sections and component separators
+        disabled_filetypes = {
+            statusline = { 'neo-tree', 'toggleterm' },
+            winbar = {},
+        },
         component_separators = '',
         section_separators = '',
         theme = {
@@ -87,7 +90,7 @@ ins_left {
 ins_left {
     -- mode component
     function()
-        return ''
+        return '󰣐'
     end,
     color = function()
         -- auto change color according to neovims mode
@@ -197,7 +200,6 @@ ins_right {
 
 ins_right {
     'diff',
-    -- Is it me or the symbol for modified us really weird
     symbols = { added = ' ', modified = '󰝤 ', removed = ' ' },
     diff_color = {
         added = { fg = colors.green },

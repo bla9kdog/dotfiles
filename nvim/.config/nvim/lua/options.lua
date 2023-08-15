@@ -28,9 +28,10 @@ o.scrolloff = 8
 
 -- User experience
 o.number = true
+o.relativenumber = true
 -- o.noruler = true
 o.title = true
-o.signcolumn = 'yes'
+o.signcolumn = 'number'
 o.cursorline = true
 o.expandtab = true
 o.tabstop = 4
@@ -43,9 +44,9 @@ o.splitbelow = true
 o.showmode = false
 o.expandtab = true
 
+-- Persist Undo
+o.undofile = true
+
 -- Python path
 g.python3_host_prog = '/usr/bin/python3'
 -- g.python3_host_prog = '/opt/homebrew/bin/python3'
-
--- Theme path
-vim.cmd('source ~/.config/nvim/theme/theme.vim')

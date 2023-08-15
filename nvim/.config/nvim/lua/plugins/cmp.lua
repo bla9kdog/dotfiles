@@ -30,6 +30,7 @@ local icons = {
     Method = '󰂔',
     Module = '󰕳',
     Field = '',
+    Reference = '',
 }
 
 -- Tab Fix
@@ -41,7 +42,7 @@ end
 cmp.setup({
     formatting = {
         format = function(entry, vim_item)
-            vim_item.kind = (icons[vim_item.kind] or 'Foo') .. ' ' .. vim_item.kind
+            vim_item.kind = (icons[vim_item.kind] or '') .. ' ' .. vim_item.kind
             vim_item.menu = ({
                 luasnip = '[SNIP]',
                 nvim_lsp = '[LSP]',

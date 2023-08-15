@@ -18,7 +18,7 @@ map('n', '<leader>bd', '<Cmd>BufferOrderByDirectory<CR>', opts)
 map('n', '<leader>bl', '<Cmd>BufferOrderByLanguage<CR>', opts)
 map('n', '<leader>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)
 
-require 'barbar'.setup {
+require('barbar').setup {
     auto_hide = false,
     icons = {
         -- Configure the base icons on the bufferline.
