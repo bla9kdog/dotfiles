@@ -1,5 +1,11 @@
 -- Mason Setup
-require('mason').setup()
+require('mason').setup({
+    ui = {
+        border = 'rounded',
+        width = 0.5,
+        height = 0.5,
+    }
+})
 require('mason-lspconfig').setup({
     ensure_installed = { 'lua_ls', 'marksman', 'clangd', 'cssls', 'emmet_language_server', 'html', 'tsserver', 'pyright',
         'vimls' }

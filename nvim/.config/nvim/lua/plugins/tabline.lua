@@ -1,22 +1,22 @@
-local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
+local keymap = require('lib.utils').keymap
 
 -- Move to previous/next
-map('n', '<A-,>', '<Cmd>BufferPrevious<CR>', opts)
-map('n', '<A-.>', '<Cmd>BufferNext<CR>', opts)
+keymap('n', '<A-,>', '<Cmd>BufferPrevious<CR>', opts)
+keymap('n', '<A-.>', '<Cmd>BufferNext<CR>', opts)
 -- Re-order to previous/next
-map('n', '<A-<>', '<Cmd>BufferMovePrevious<CR>', opts)
-map('n', '<A->>', '<Cmd>BufferMoveNext<CR>', opts)
+keymap('n', '<leader>,', '<Cmd>BufferMovePrevious<CR>', opts)
+keymap('n', '<leader>.', '<Cmd>BufferMoveNext<CR>', opts)
 -- Pin/unpin buffer
-map('n', '<A-p>', '<Cmd>BufferPin<CR>', opts)
+keymap('n', '<A-p>', '<Cmd>BufferPin<CR>', opts)
 -- Close buffer
-map('n', '<A-c>', '<Cmd>BufferClose<CR>', opts)
+keymap('n', '<A-c>', '<Cmd>BufferClose<CR>', opts)
 
 -- Sort automatically by...
-map('n', '<leader>bb', '<Cmd>BufferOrderByBufferNumber<CR>', opts)
-map('n', '<leader>bd', '<Cmd>BufferOrderByDirectory<CR>', opts)
-map('n', '<leader>bl', '<Cmd>BufferOrderByLanguage<CR>', opts)
-map('n', '<leader>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)
+keymap('n', '<leader>bb', '<Cmd>BufferOrderByBufferNumber<CR>', opts)
+keymap('n', '<leader>bd', '<Cmd>BufferOrderByDirectory<CR>', opts)
+keymap('n', '<leader>bl', '<Cmd>BufferOrderByLanguage<CR>', opts)
+keymap('n', '<leader>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)
 
 require('barbar').setup {
     auto_hide = false,
@@ -46,8 +46,13 @@ require('barbar').setup {
             -- Requires `nvim-web-devicons` if `true`
             enabled = true,
         },
+        separator = { left = '', right = '' },
+        separator_at_the_end = false,
+        preset = 'default',
     },
-    sidebar_filetypes = {
-        ['neo-tree'] = { event = 'BufWipeout' }
-    }
+    maximum_padding = 2,
+    minimum_padding = 2,
+    -- sidebar_filetypes = {
+    --     ['neo-tree'] = { event = 'BufWipeout' }
+    -- }
 }

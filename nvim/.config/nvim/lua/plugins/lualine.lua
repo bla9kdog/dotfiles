@@ -3,17 +3,18 @@ local lualine = require('lualine')
 -- Color table for highlights
 -- stylua: ignore
 local colors = {
-    bg       = '#15131a',
+    bg       = '#13151a',
     fg       = '#bac2de',
     yellow   = '#f9e2af',
     cyan     = '#94e2d5',
     darkblue = '#081633',
-    green    = '#a6e3a1',
+    green    = '#85ffb4',
     orange   = '#fab387',
     violet   = '#b4befe',
     magenta  = '#cba6f7',
     blue     = '#89b4fa',
     red      = '#f38ba8',
+    white    = '#ffffff'
 }
 
 local conditions = {
@@ -137,7 +138,7 @@ ins_left {
     'filename',
     padding = { left = 0 },
     cond = conditions.buffer_not_empty,
-    color = { fg = colors.green, gui = 'bold' },
+    color = { fg = colors.white, gui = 'bold' },
 }
 
 ins_left { 'location' }

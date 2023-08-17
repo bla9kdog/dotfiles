@@ -37,6 +37,14 @@ return require('packer').startup(function(use)
         run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
     }
 
+    -- Vim Tmux Navigation
+    use({
+        'christoomey/vim-tmux-navigator',
+        config = function()
+            require('plugins.tmux')
+        end,
+    })
+
     -- Highlight enclosing tags
     use('valloric/MatchTagAlways')
 
@@ -45,6 +53,14 @@ return require('packer').startup(function(use)
         'windwp/nvim-autopairs',
         config = function()
             require('plugins.autopairs')
+        end,
+    })
+
+    -- Close tags
+    use({
+        'windwp/nvim-ts-autotag',
+        config = function()
+            require('plugins.autotag')
         end,
     })
 

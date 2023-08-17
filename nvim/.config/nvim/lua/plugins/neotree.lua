@@ -6,13 +6,14 @@ require("neo-tree").setup({
     close_if_last_window = true,
     enable_git_status = true,
     window = {
-        width = 35,
+        width = 30,
     },
     filesystem = {
+        follow_current_file = { enabled = true },
         filtered_items = {
             visible = true,
             hide_dotfiles = false,
-            never_show = {
+            hide_by_name = {
                 '.DS_Store',
                 'thumbs.db'
             }

@@ -12,7 +12,7 @@ require('catppuccin').setup({
             maroon = '#eba0ac',
             peach = '#fab387',
             yellow = '#f9e2af',
-            green = '#a6e3a1',
+            green = '#85ffb4',
             teal = '#94e2d5',
             sky = '#89dceb',
             sapphire = '#74c7ec',
@@ -35,10 +35,11 @@ require('catppuccin').setup({
 
     custom_highlights = function(colors)
         return {
+            NormalFloat = { bg = colors.base },
             Comment = { fg = colors.flamingo },
-            TabLine = { bg = colors.base, fg = colors.surface1 },
-            TabLineSel = { bg = colors.mantle },
-            TabLineFill = { bg = colors.base },
+            TabLine = { bg = colors.mantle, fg = colors.surface1 },
+            TabLineSel = { bg = colors.surface0, fg = colors.text, style = { 'bold' } },
+            TabLineFill = { bg = colors.mantle },
             CmpBorder = { fg = colors.surface2 },
             Pmenu = { bg = colors.base },
             PmenuSel = { bg = colors.mantle },
@@ -50,14 +51,14 @@ require('catppuccin').setup({
             IndentBlanklineIndent = { fg = colors.surface0 },
             IndentSpaceIndent = { fg = colors.surface0 },
             IndentBlanklineContextStart = { bg = colors.mantle, style = { 'bold', 'italic' } },
-            SignColumn = { bg = colors.base },
+            SignColumn = { bg = colors.mantle },
             BufferSign = { bg = colors.mantle, fg = colors.mantle },
             BufferSignRight = { bg = colors.mantle, fg = colors.mantle },
             BufferCurrentSign = { bg = colors.mantle, fg = colors.mantle },
             BufferCurrentSignRight = { bg = colors.mantle, fg = colors.mantle },
-            BufferInactiveSign = { bg = colors.base, fg = colors.base },
-            BufferInactiveSignRight = { bg = colors.base, fg = colors.base },
-            NeoTreeFloatBorder = { bg = colors.base, fg = colors.overlay2 },
+            BufferInactiveSign = { bg = colors.mantle, fg = colors.mantle },
+            BufferInactiveSignRight = { bg = colors.mantle, fg = colors.mantle },
+            NeoTreeFloatBorder = { bg = colors.mantle, fg = colors.overlay2 },
             VertSplit = { fg = colors.surface0 },
             StatusLine = { bg = colors.mantle },
             StatusLineNC = { bg = colors.mantle },
@@ -74,6 +75,9 @@ require('catppuccin').setup({
             NoiceCmdlineIcon = { fg = colors.overlay2 },
             NoiceCmdlinePopupBorder = { fg = colors.overlay2 },
             NoiceCmdlinePopupTitle = { fg = colors.overlay2 },
+            NoicePopup = { bg = colors.base },
+            NoiceSplit = { bg = colors.base },
+            NoiceCmdline = { bg = colors.mantle }
         }
     end
 })

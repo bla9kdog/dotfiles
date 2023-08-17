@@ -1,17 +1,17 @@
 local opts = { noremap = true, silent = true }
 
-vim.keymap.set("n", "<C-c>", "<cmd>PickColor<cr>", opts)
-vim.keymap.set("i", "<C-c>", "<cmd>PickColorInsert<cr>", opts)
-vim.keymap.set("n", "<C-A-c>", "<cmd>ConvertHEXandRGB<cr>", opts)
+vim.keymap.set('n', '<C-c>', '<cmd>PickColor<cr>', opts)
+vim.keymap.set('i', '<C-c>', '<cmd>PickColorInsert<cr>', opts)
+vim.keymap.set('n', '<C-A-c>', '<cmd>ConvertHEXandRGB<cr>', opts)
 
-require("color-picker").setup({ -- for changing icons & mappings
-    ["icons"] = { "ﱢ", "" },
-    ["border"] = "rounded",     -- none | single | double | rounded | solid | shadow
-    ["keymap"] = {              -- mapping example:
-        ["U"] = "<Plug>ColorPickerSlider5Decrease",
-        ["O"] = "<Plug>ColorPickerSlider5Increase",
+require('color-picker').setup({ -- for changing icons & mappings
+    ['icons'] = { 'ﱢ', '' },
+    ['border'] = 'rounded',     -- none | single | double | rounded | solid | shadow
+    ['keymap'] = {              -- mapping example:
+        ['U'] = '<Plug>ColorPickerSlider5Decrease',
+        ['O'] = '<Plug>ColorPickerSlider5Increase',
     },
-    ["background_highlight_group"] = "Normal",  -- default
-    ["border_highlight_group"] = "FloatBorder", -- default
-    ["text_highlight_group"] = "Normal",        --default
+    ['background_highlight_group'] = 'Normal',  -- default
+    ['border_highlight_group'] = 'FloatBorder', -- default
+    ['text_highlight_group'] = 'Normal',        --default
 })
