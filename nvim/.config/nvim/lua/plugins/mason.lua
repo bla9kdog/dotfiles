@@ -24,15 +24,13 @@ return {
                 "tsserver",
                 "html",
                 "cssls",
-                "tailwindcss",
                 "lua_ls",
                 "clangd",
                 "marksman",
                 "emmet_ls",
                 "pyright",
             },
-            -- auto-install configured servers (with lspconfig)
-            automatic_installation = true, -- not the same as ensure_installed
+            automatic_installation = true,
         })
     end,
 }

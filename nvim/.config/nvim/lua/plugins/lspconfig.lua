@@ -9,6 +9,8 @@ return {
         local cmp_nvim_lsp = require("cmp_nvim_lsp")
         local keymap = vim.keymap
         local opts = { noremap = true, silent = true }
+        require("lsp-format").setup {}
+
         local on_attach = function(client, bufnr)
             require("lsp-format").on_attach(client)
             opts.buffer = bufnr
@@ -28,11 +30,16 @@ return {
             ['textDocument/hover'] = vim.lsp.with(vim.lsp.handlers.hover, { border = 'single' }),
             ['textDocument/signatureHelp'] = vim.lsp.with(vim.lsp.handlers.signature_help, { border = 'single' }),
         }
-
+        -- LSP Config
         lspconfig["lua_ls"].setup({
             on_attach = on_attach,
             capabilities = capabilities,
             handlers = handlers,
+            settings = {
+                Lua = {
+                    diagnostics = { globals = { 'vim' } }
+                }
+            }
         })
 
         lspconfig["marksman"].setup({
