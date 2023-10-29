@@ -1,7 +1,16 @@
-require("nvim-surround").setup()
-
-vim.cmd('nmap "" ysiw"')
-vim.cmd("nmap '' ysiw'")
-vim.cmd('nmap (( ysiw(')
-vim.cmd('nmap {{ ysiw{')
-vim.cmd('nmap [[ ysiw[')
+return {
+    "kylechui/nvim-surround",
+    version = "*", -- Use for stability; omit to use `main` branch for the latest features
+    event = "VeryLazy",
+    config = function()
+        local keymap = vim.cmd
+        keymap('nmap "" ysiw"')
+        keymap("nmap '' ysiw'")
+        keymap('nmap (( ysiw(')
+        keymap('nmap {{ ysiw{')
+        keymap('nmap [[ ysiw[')
+        require("nvim-surround").setup({
+            -- Configuration here, or leave empty to use defaults
+        })
+    end
+}

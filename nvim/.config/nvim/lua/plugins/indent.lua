@@ -1,17 +1,24 @@
-vim.opt.list = true
+return {
+    "lukas-reineke/indent-blankline.nvim",
+    main = "ibl",
+    opts = {},
+    config = function()
+        local indent = require("ibl")
 
-require('indent_blankline').setup {
-    show_end_of_line = true,
-    show_trailing_blankline_indent = false,
-    space_char_blankline = ' ',
-    show_current_context = true,
-    show_current_context_start = true,
-    show_first_indent_level = false,
-    filetype_exclude = { 'terminal', 'mason', 'help', 'neo-tree' },
-    char_highlight_list = {
-        'IndentBlanklineIndent',
-    },
-    space_char_highlight_list = {
-        'IndentSpaceIndent',
-    }
+        indent.setup({
+            indent = {
+                tab_char = '▎',
+            },
+            whitespace = { remove_blankline_trail = true },
+            scope = {
+                show_end = true,
+                show_start = false,
+            },
+            exclude = {
+                filetypes = { 'terminal', 'mason', 'help', 'neo-tree' },
+                buftypes = { 'terminal', 'quickfix', 'nofile', 'prompt' },
+            },
+
+        })
+    end,
 }

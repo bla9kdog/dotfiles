@@ -6,7 +6,7 @@ local o = vim.o
 -- Keymaps
 ----------------------------------------------------------------
 
-local keymap = require('lib.utils').keymap
+local keymap = require('utils').keymap
 
 -- Map leader to space
 g.mapleader = ' '

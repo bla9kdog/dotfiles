@@ -1,20 +1,4 @@
-local keymap = require('lib.utils').keymap
-
-require("toggleterm").setup({
-    direction = 'horizontal',
-    size = 12,
-    autochdir = true,
-    winbar = {
-        enabled = false,
-        name_formatter = function(term) --  term: Terminal
-            return term.name
-        end
-    },
-    persist_mode = false,
-    start_in_insert = true,
-    hide_numbers = true,
-})
-
+local keymap = require('utils').keymap
 keymap('n', '<C-t>', '<cmd>ToggleTerm<CR>')
 keymap('t', '<C-t>', '<cmd>wincmd q<CR>')
 
@@ -25,3 +9,22 @@ function _G.set_terminal_keymaps()
 end
 
 vim.cmd('autocmd! TermOpen term://*toggleterm* lua set_terminal_keymaps()')
+
+return {
+    {
+        'akinsho/toggleterm.nvim',
+        version = "*",
+        opts = {
+            direction = 'horizontal',
+            size = 12,
+            autochdir = true,
+            shading_factor = 1,
+            winbar = {
+                enabled = false,
+            },
+            persist_mode = false,
+            start_in_insert = true,
+            hide_numbers = true,
+        },
+    }
+}

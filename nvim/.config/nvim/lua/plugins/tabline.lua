@@ -1,5 +1,5 @@
 local opts = { noremap = true, silent = true }
-local keymap = require('lib.utils').keymap
+local keymap = require('utils').keymap
 
 -- Move to previous/next
 keymap('n', '<A-,>', '<Cmd>BufferPrevious<CR>', opts)
@@ -18,41 +18,53 @@ keymap('n', '<leader>bd', '<Cmd>BufferOrderByDirectory<CR>', opts)
 keymap('n', '<leader>bl', '<Cmd>BufferOrderByLanguage<CR>', opts)
 keymap('n', '<leader>bw', '<Cmd>BufferOrderByWindowNumber<CR>', opts)
 
-require('barbar').setup {
-    auto_hide = false,
-    icons = {
-        -- Configure the base icons on the bufferline.
-        -- Valid options to display the buffer index and -number are `true`, 'superscript' and 'subscript'
-        buffer_index = false,
-        buffer_number = false,
-        button = '',
-        -- Enables / disables diagnostic symbols
-        diagnostics = {
-            [vim.diagnostic.severity.ERROR] = { enabled = true, icon = 'ﬀ' },
-            [vim.diagnostic.severity.WARN] = { enabled = false },
-            [vim.diagnostic.severity.INFO] = { enabled = false },
-            [vim.diagnostic.severity.HINT] = { enabled = true },
-        },
-        gitsigns = {
-            added = { enabled = true, icon = '+' },
-            changed = { enabled = true, icon = '~' },
-            deleted = { enabled = true, icon = '-' },
-        },
-        filetype = {
-            -- Sets the icon's highlight group.
-            -- If false, will use nvim-web-devicons colors
-            custom_colors = false,
+return {
 
-            -- Requires `nvim-web-devicons` if `true`
-            enabled = true,
-        },
-        separator = { left = '', right = '' },
-        separator_at_the_end = false,
-        preset = 'default',
+    'romgrk/barbar.nvim',
+    dependencies = {
+        'lewis6991/gitsigns.nvim',   -- OPTIONAL: for git status
+        'nvim-tree/nvim-web-devicons', -- OPTIONAL: for file icons
     },
-    maximum_padding = 2,
-    minimum_padding = 2,
-    -- sidebar_filetypes = {
-    --     ['neo-tree'] = { event = 'BufWipeout' }
-    -- }
+    init = function() vim.g.barbar_auto_setup = false end,
+    opts = {
+        auto_hide = false,
+        icons = {
+            -- Configure the base icons on the bufferline.
+            -- Valid options to display the buffer index and -number are `true`, 'superscript' and 'subscript'
+            buffer_index = false,
+            buffer_number = false,
+            button = '',
+            -- Enables / disables diagnostic symbols
+            diagnostics = {
+                [vim.diagnostic.severity.ERROR] = { enabled = true, icon = 'ﬀ' },
+                [vim.diagnostic.severity.WARN] = { enabled = false },
+                [vim.diagnostic.severity.INFO] = { enabled = false },
+                [vim.diagnostic.severity.HINT] = { enabled = true },
+            },
+            gitsigns = {
+                added = { enabled = true, icon = '+' },
+                changed = { enabled = true, icon = '~' },
+                deleted = { enabled = true, icon = '-' },
+            },
+            filetype = {
+                -- Sets the icon's highlight group.
+                -- If false, will use nvim-web-devicons colors
+                custom_colors = false,
+
+                -- Requires `nvim-web-devicons` if `true`
+                enabled = true,
+            },
+            separator = { left = '', right = '' },
+            separator_at_the_end = false,
+            preset = 'default',
+        },
+        maximum_padding = 2,
+        minimum_padding = 2,
+        -- sidebar_filetypes = {
+        --     ['neo-tree'] = { event = 'BufWipeout' }
+        -- }
+
+    },
+    version = '^1.0.0', -- optional: only update when a new 1.x version is released
+
 }
