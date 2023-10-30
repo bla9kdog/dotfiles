@@ -1,0 +1,120 @@
+yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+sudo yabai --load-sa
+
+# Disable MacOS Window Manager
+launchctl unload -F /System/Library/LaunchAgents/com.apple.WindowManager.plist > /dev/null 2>&1 &
+
+# bsp or float (default: float)
+yabai -m config layout bsp
+
+# set all padding and gaps to 10pt (default: 0)
+yabai -m config top_padding    38
+yabai -m config bottom_padding 10
+yabai -m config left_padding   10
+yabai -m config right_padding  10
+yabai -m config window_gap     10
+
+# top bar padding
+# yabai -m config external_bar main:-8:0
+
+# placement
+yabai -m config window_placement             second_child
+yabai -m config auto_balance                 on
+
+# floating windows are always on top (default: off)
+yabai -m config window_topmost off
+
+# window opacity (default: off)
+yabai -m config window_opacity on
+yabai -m config active_window_opacity 1.0
+yabai -m config normal_window_opacity 0.92
+
+# rules
+yabai -m rule --add app="^System Settings$" manage=off layer=above
+yabai -m rule --add app="^Finder$" manage=off layer=above
+yabai -m rule --add app="^Calculator$" manage=off
+yabai -m rule --add app="^Notes$" manage=off
+yabai -m rule --add app="^AppCleaner$" manage=off
+yabai -m rule --add app="^App Store$" manage=off layer=above
+yabai -m rule --add app="^Activity Monitor$" manage=off layer=above
+yabai -m rule --add app="^Installer$" manage=off layer=above
+yabai -m rule --add app="^Preview$" manage=on
+yabai -m rule --add app="^Audio Hijack$" manage=off layer=above
+yabai -m rule --add app="^UA Connect$" manage=off
+yabai -m rule --add app="^balenaEtcher$" manage=off
+yabai -m rule --add app="^Raycast$" manage=off
+yabai -m rule --add app="^System Information$" manage=off layer=above
+yabai -m rule --add title="^Preferences$" manage=off 
+yabai -m rule --add title="^General$" manage=off 
+yabai -m rule --add app="^Archive Utility$" manage=off layer=above
+yabai -m rule --add app="^Spitfire Audio$" manage=off layer=above
+yabai -m rule --add title="^Settings$" manage=off layer=above
+yabai -m rule --add title="^Extensions$" manage=off layer=above
+yabai -m rule --add title="^Advanced$" manage=off layer=above
+yabai -m rule --add title="^Security$" manage=off layer=above
+yabai -m rule --add title="^Privacy$" manage=off layer=above
+yabai -m rule --add title="^Search$" manage=off layer=above
+yabai -m rule --add title="^Tabs$" manage=off layer=above
+yabai -m rule --add app="^SuperCollider$" manage=off layer=above
+yabai -m rule --add app="^TotalMix FX$" manage=off layer=above
+yabai -m rule --add app="^Fireface USB Settings$" manage=off layer=above
+yabai -m rule --add app="^plugdata$" manage=off layer=above
+
+# mouse
+yabai -m config mouse_modifier               fn
+yabai -m config mouse_action1                move
+yabai -m config mouse_action2                resize
+yabai -m config focus_follows_mouse          autofocus
+
+# workspace labels
+yabai -m space 1 --label web
+yabai -m space 2 --label design
+yabai -m space 3 --label code 
+yabai -m space 4 --label productivity
+yabai -m space 5 --label audio
+yabai -m space 6 --label social
+yabai -m space 7 --label mail
+yabai -m space 8 --label music
+
+# window rules
+yabai -m rule --add app="^Figma$" space=design
+yabai -m rule --add app="^Blender$" space=design
+yabai -m rule --add app="^Safari$" space=web
+yabai -m rule --add app="^Slack$" space=social
+yabai -m rule --add app="^Messages$" space=social
+yabai -m rule --add app="^Telegram$" space=social
+yabai -m rule --add app="^Mail$" space=mail
+yabai -m rule --add app="^Code$" space=code
+yabai -m rule --add app="^Live$" space=audio
+yabai -m rule --add app="^VCV Rack 2 Free$" space=audio
+yabai -m rule --add app="^Max$" space=audio
+yabai -m rule --add app="^Bitwig Studio$" space=audio
+yabai -m rule --add app="^REAPER$" space=audio
+yabai -m rule --add app="^Splice$" space=audio
+yabai -m rule --add app="^Music$" space=music
+yabai -m rule --add app="^Spotify$" space=music
+yabai -m rule --add app="^Podcasts$" space=music
+yabai -m rule --add app="^Logic Pro$" space=audio
+yabai -m rule --add app="^Notion$" space=productivity
+yabai -m rule --add app="^XCode$" space=code
+yabai -m rule --add app="^TouchDesigner$" space=design
+
+# window borders
+yabai -m config window_border                   off
+yabai -m config window_border_width             2
+yabai -m config window_border_radius            14
+yabai -m config active_window_border_color      0xff484853
+yabai -m config normal_window_border_color      0xff2F2F36
+yabai -m config insert_window_border_color      0xff2F2F36
+
+# modify window shadows (default: on, options: on, off, float)
+# example: show shadows only for floating windows
+yabai -m config window_shadow on
+
+# floating always on top
+#applications="(iTerm2|Safari|Figma|Music|Mail|Messages|Live|Slack|Preview)"
+#yabai -m rule --add app="^${applications}$"     manage=on
+#yabai -m rule --add app!="^${applications}$"    manage=off
+
+skhd -c $HOME/.config/skhd/skhdrc
+
