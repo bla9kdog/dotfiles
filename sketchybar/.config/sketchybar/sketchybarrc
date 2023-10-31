@@ -4,6 +4,7 @@
 # https://github.com/FelixKratz/dotfiles
 
 PLUGIN_DIR="$HOME/.config/sketchybar/plugins"
+SPOTIFY_EVENT="com.spotify.client.PlaybackStateChanged"
 
 ##### Bar Appearance #####
 # Configuring the general appearance of the bar, these are only some of the
@@ -104,20 +105,15 @@ sketchybar --add item clock right                        \
               --set btc update_freq=20 \
               --set btc script="$PLUGIN_DIR/btc.sh" \
                           background.padding_right=12     \
-          --add item media right \
-              --set media icon= \
-              --set media script="$PLUGIN_DIR/media.sh" \
-              --set media "${media[@]}" \
-              --set media updates=on \
-              --set media update_freq=20 \
-              --set media background.padding_right=12     \
-              --subscribe media media_change \
-          #--add item music_info right  \
-          #--set music_info script="$PLUGIN_DIR/music.sh" \
-          #--set music_info click_script="$PLUGIN_DIR/music_click.sh" \
-                                   #background.padding_right=12     \
-          #--subscribe music_info song_update \
 
+sketchybar --add event spotify_change $SPOTIFY_EVENT \
+    --add item spotify right \
+    --set spotify \
+    label.drawing=off \
+    label.padding_left=3 \
+    background.padding_right=12     \
+    script="$PLUGIN_DIR/spotify.sh" \
+    --subscribe spotify spotify_change mouse.clicked
 ##### Finalizing Setup #####
 # The below command is only needed at the end of the initial configuration and
 # should never be run in an item script.

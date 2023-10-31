@@ -21,13 +21,13 @@ shift + alt - 7 : yabai -m window --space 7; yabai -m space
 shift + alt - 8 : yabai -m window --space 8; yabai -m space 
 
 # resize windows
-lctrl + alt - h : yabai -m window --resize left:-50:0; \
-                  yabai -m window --resize right:-50:0
-lctrl + alt - j : yabai -m window --resize bottom:0:50; \
-                  yabai -m window --resize top:0:50
-lctrl + alt - k : yabai -m window --resize top:0:-50; \
-                  yabai -m window --resize bottom:0:-50
-lctrl + alt - l : yabai -m window --resize right:50:0; \
+ctrl + alt - h : yabai -m window --resize left:-50:0; \
+                 yabai -m window --resize right:-50:0
+ctrl + alt - j : yabai -m window --resize bottom:0:50; \
+                 yabai -m window --resize top:0:50
+ctrl + alt - k : yabai -m window --resize top:0:-50; \
+                 yabai -m window --resize bottom:0:-50
+ctrl + alt - l : yabai -m window --resize right:50:0; \
                   yabai -m window --resize left:50:0
 
 # rotate windows clockwise and anticlockwise
@@ -52,14 +52,13 @@ cmd + alt - w : open -na "/Applications/Safari.app"
 shift + alt - v : sketchybar --bar topmost=on
 shift + alt - b : sketchybar --bar topmost=off
 
-# toggle float
-shift + alt - f : yabai -m window --toggle float
+# toggle fullscreen
+shift + alt - m : yabai -m window --toggle zoom-fullscreen
 
 # float / Unfloat window
-shift + alt - space : \
+shift + alt - f : \
     yabai -m window --toggle float; \
     yabai -m window --grid 4:4:1:1:2:2
-
 
 # close window
 shift + alt - q : yabai -m window --close
