@@ -47,8 +47,8 @@ alt - 9 : yabai -m space --focus 9
 alt - tab : yabai -m space --focus recent
 
 # spawn apps
-cmd + alt - return : open -na "/Applications/iTerm.app"
-cmd + alt - w : open -na "/Applications/Safari.app"
+cmd + alt - return : open -na iTerm
+cmd + alt - w : open -na Safari
 shift + alt - v : sketchybar --bar topmost=on
 shift + alt - b : sketchybar --bar topmost=off
 
