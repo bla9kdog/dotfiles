@@ -21,7 +21,7 @@ return {
 			filtered_items = {
 				visible = true,
 				hide_dotfiles = false,
-				hide_by_name = {
+				never_show = {
 					".DS_Store",
 					"thumbs.db",
 				},

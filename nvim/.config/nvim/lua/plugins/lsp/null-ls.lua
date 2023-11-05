@@ -31,7 +31,9 @@ return {
 			sources = {
 				formatting.prettier.with({
 					extra_args = function(params)
-						return params.options and params.options.tabSize and { "--tab-width", params.options.tabSize }
+						return params.options
+							and params.options.tabSize
+							and { "--single-quote", "true", "--tab-width", params.options.tabSize }
 					end,
 				}),
 				formatting.stylua,

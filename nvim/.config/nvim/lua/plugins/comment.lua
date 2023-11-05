@@ -10,5 +10,6 @@ return {
 			line = "<C-_>",
 		},
 	},
-	lazy = false,
+	lazy = true,
+	keys = { { "<C-_>", mode = { "n", "v" } } },
 }
