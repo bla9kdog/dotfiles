@@ -1,5 +1,5 @@
-sketchybar --add item mail right                            \
-           --set mail script="$PLUGIN_DIR/mail.sh"          \
+sketchybar --add item homebrew right                        \
+           --set homebrew script="$PLUGIN_DIR/brew.sh"      \
                       background.padding_right=12           \
                       icon.font="$FONT_ICON:16.0"           \
                       label.font="$FONT_NOTIFICATION"       \
@@ -12,5 +12,6 @@ sketchybar --add item mail right                            \
                       label.background.y_offset=5           \
                       label.align=center                    \
                       icon.padding_right=-6                 \
-                      update_freq=2                         \
-           --subscribe mail system_woke
+                      update_freq=100                       \
+           --subscribe homebrew homebrew-update
+

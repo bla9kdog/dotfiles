@@ -6,13 +6,13 @@ ITEM_DIR="$CONFIG_DIR/items"
 FONT="SF Pro Text:Semibold"
 FONT_ICON="Font Awesome 6 Pro:Regular"
 FONT_BRANDS_ICON="Font Awesome 6 Brands:Regular"
-FONT_NOTIFICATION="SF Pro Text:Bold:9.0"
+FONT_NOTIFICATION="SF Pro Text:Black:10.0"
 BAR_HEIGHT=32
 ICON_COLOR=0x90ffffff
 LABEL_COLOR=0xddffffff
 BAR_COLOR=0xff000000
 
-sketchybar --bar      height=$BAR_HEIGHT                  \
+sketchybar  --bar     height=$BAR_HEIGHT                  \
                       position=top                        \
                       blur_radius=80                      \
                       topmost=on                          \
@@ -40,6 +40,7 @@ source "$ITEM_DIR/btc.sh"
 source "$ITEM_DIR/mail.sh"
 source "$ITEM_DIR/messages.sh"
 source "$ITEM_DIR/slack.sh"
+source "$ITEM_DIR/brew.sh"
 source "$ITEM_DIR/spotify.sh"
 
 sketchybar --update

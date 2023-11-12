@@ -9,6 +9,6 @@ if [ "$SSID" = "" ]; then
   sketchybar --set $NAME label="Disconnected" icon= \
     --set $NAME click_script="/usr/bin/open /System/Library/PreferencePanes/Network.prefPane"
 else
-    sketchybar --set $NAME label="$SSID [$IP_ADDRESS] [⇣$CURR_TX KiB/s]" icon=  \
+    sketchybar --set $NAME label="$IP_ADDRESS [⇣$CURR_TX KiB/s]" icon=  \
     --set $NAME click_script="/usr/bin/open /System/Library/PreferencePanes/Network.prefPane"
 fi
