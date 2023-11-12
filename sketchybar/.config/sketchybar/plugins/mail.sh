@@ -1,3 +1,5 @@
+#!/usr/bin/env sh
+
 COUNT=$(osascript -e 'tell application "Mail" to return the unread count of inbox')
 if [ "$COUNT" -gt "0" ]; then
     sketchybar --set $NAME label="$COUNT" icon= \

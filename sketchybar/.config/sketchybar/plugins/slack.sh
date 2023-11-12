@@ -1,3 +1,5 @@
+#!/usr/bin/env sh
+
 STATUS_LABEL=$(lsappinfo info -only StatusLabel "Slack")
 ICON=""
 

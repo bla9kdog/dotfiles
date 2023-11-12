@@ -3,17 +3,18 @@
 PLUGIN_DIR="$CONFIG_DIR/plugins"
 ITEM_DIR="$CONFIG_DIR/items"
 
-FONT="Liga SFMono Nerd Font:Medium"
+FONT="SF Pro Text:Semibold"
 FONT_ICON="Font Awesome 6 Pro:Regular"
 FONT_BRANDS_ICON="Font Awesome 6 Brands:Regular"
 FONT_NOTIFICATION="SF Pro Text:Bold:9.0"
 BAR_HEIGHT=32
-ICON_COLOR=0x80ffffff
-LABEL_COLOR=0xffffffff
-BAR_COLOR=0xff050505
+ICON_COLOR=0x90ffffff
+LABEL_COLOR=0xddffffff
+BAR_COLOR=0xff000000
 
 sketchybar --bar      height=$BAR_HEIGHT                  \
                       position=top                        \
+                      blur_radius=80                      \
                       topmost=on                          \
                       sticky=on                           \
                       padding_left=5                      \
