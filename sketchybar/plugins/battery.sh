@@ -11,7 +11,7 @@ if [[ $CHARGING != "" ]]; then
   exit 0
 fi
 
-[[ ${BATT_PERCENT} -gt 10 ]] && COLOR=0xFFFFFFFF|| COLOR=0xFFFF0000
+[[ ${BATT_PERCENT} -gt 10 ]] && COLOR=0x80FFFFFF|| COLOR=0xFFFF0000
 
 case ${BATT_PERCENT} in
    100) ICON="" ;;
@@ -30,4 +30,5 @@ esac
 sketchybar -m --set battery \
   icon.color=$COLOR \
   icon=$ICON \
-  label=$(printf "${BATT_PERCENT}%%")
+  label=$(printf "${BATT_PERCENT}%%") \
+  click_script="/usr/bin/open /System/Library/PreferencePanes/Battery.prefPane"

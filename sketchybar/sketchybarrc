@@ -1,0 +1,46 @@
+#!/bin/bash
+
+PLUGIN_DIR="$CONFIG_DIR/plugins"
+ITEM_DIR="$CONFIG_DIR/items"
+
+FONT="Liga SFMono Nerd Font:Medium"
+FONT_ICON="Font Awesome 6 Pro:Regular"
+FONT_BRANDS_ICON="Font Awesome 6 Brands:Regular"
+FONT_NOTIFICATION="SF Pro Text:Bold:9.0"
+BAR_HEIGHT=32
+ICON_COLOR=0x80ffffff
+LABEL_COLOR=0xffffffff
+BAR_COLOR=0xff050505
+
+sketchybar --bar      height=$BAR_HEIGHT                  \
+                      position=top                        \
+                      topmost=on                          \
+                      sticky=on                           \
+                      padding_left=5                      \
+                      padding_right=10                    \
+                      color=$BAR_COLOR                    \
+                                                          \
+            --default drawing=on                          \
+                      updates=when_shown                  \
+                      icon.color=$ICON_COLOR              \
+                      icon.font="$FONT_ICON:16.0"         \
+                      label.color=$LABEL_COLOR            \
+                      label.font="$FONT:13.0"             \
+                      label.padding_left=4                \
+                      label.padding_right=4               \
+                      icon.padding_left=4                 \
+                      icon.padding_right=4                \
+
+source "$ITEM_DIR/spaces.sh"
+source "$ITEM_DIR/date.sh"
+source "$ITEM_DIR/battery.sh"
+source "$ITEM_DIR/wifi.sh"
+source "$ITEM_DIR/btc.sh"
+source "$ITEM_DIR/mail.sh"
+source "$ITEM_DIR/messages.sh"
+source "$ITEM_DIR/slack.sh"
+source "$ITEM_DIR/spotify.sh"
+
+sketchybar --update
+
+echo "sketchybar configuration loaded..k

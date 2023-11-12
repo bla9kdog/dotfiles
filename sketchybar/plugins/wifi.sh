@@ -5,7 +5,9 @@ SSID="$(echo "$CURRENT_WIFI" | grep -o "SSID: .*" | sed 's/^SSID: //')"
 CURR_TX="$(echo "$CURRENT_WIFI" | grep -o "lastTxRate: .*" | sed 's/^lastTxRate: //')"
 
 if [ "$SSID" = "" ]; then
-  sketchybar --set $NAME label="Disconnected" icon=
+  sketchybar --set $NAME label="Disconnected" icon= \
+    --set $NAME click_script="/usr/bin/open /System/Library/PreferencePanes/Network.prefPane"
 else
-  sketchybar --set $NAME label="$SSID" icon=
+  sketchybar --set $NAME label="$SSID" icon=  \
+    --set $NAME click_script="/usr/bin/open /System/Library/PreferencePanes/Network.prefPane"
 fi
